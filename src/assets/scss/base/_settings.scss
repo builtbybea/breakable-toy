@@ -1,0 +1,32 @@
+$primary: #FFDB22;
+$secondary: #232323;
+$accent: #EF597A;
+$accent-hover: #F8A8BA;
+$white: #FFFFFF;
+
+$h1-font: 'pocket_monkregular';
+$h2-font: 'pocket_monkregular';
+$h3-font: Poppins, sans-serif;
+$button-font: Poppins, sans-serif;
+
+$font-size-large: 60px;
+$font-size-medium: 42px;
+$font-size-small: 20px;
+
+h1 {
+    font-family: $h1-font;
+    font-size: $font-size-large;
+    color: $primary;
+}
+
+h2 {
+    font-family: $h2-font;
+    font-size: $font-size-medium;
+    color: $primary;
+}
+
+h3 {
+    font-family: $h3-font;
+    font-size: $font-size-small;
+    color: $secondary;
+}
