@@ -1,10 +1,22 @@
-$grey: #232323;
-$pink: #EF597A;
-$yellow: #FFDB22;
-$pink-light: #F8A8BA;
+$primary: #FFDB22;
+$secondary: #232323;
+$accent: #EF597A;
+$accent-hover: #F8A8BA;
 $white: #FFFFFF;
 
 $h1-font: 'pocket_monkregular';
 $h2-font: 'pocket_monkregular';
 $h3-font: Poppins, sans-serif;
 $button-font: Poppins, sans-serif;
+
+h1 {
+    font-family: $h1-font;
+}
+
+h2 {
+    font-family: $h2-font;
+}
+
+h3 {
+    font-family: $h3-font;
+}
