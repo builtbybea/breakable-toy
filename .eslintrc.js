@@ -18,7 +18,7 @@ module.exports = {
     'rules': {
       "no-process-env": 0,
       "vue/no-multiple-template-root": 0,
-      "vue/component-definition-name-casing": 0
-       // "no-console": "off",
+      "vue/component-definition-name-casing": 0,
+      "no-console": 0,
     },
   };
