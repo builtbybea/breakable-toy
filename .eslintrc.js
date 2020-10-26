@@ -6,5 +6,7 @@ module.exports = {
     '@fueled/frontend-web/lib/vue',
   ],
   'settings': {},
-  'rules': {},
+  'rules': {
+    'no-console': 'off',
+  },
 };

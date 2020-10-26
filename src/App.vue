@@ -2,12 +2,20 @@
 <div class="main">
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">Hiya</router-link>
   </div>
   <router-view/>
   </div>
 </template>
+<script>
 
+export default {
+  created() {
+    console.log('hiya');
+  },
+};
+
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
