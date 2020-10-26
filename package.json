@@ -5,10 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "eslint --ext .js,.vue ./src"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "eslint-import-resolver-webpack": "^0.13.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-rc.1"
   },
