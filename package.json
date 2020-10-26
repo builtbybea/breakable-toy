@@ -13,6 +13,7 @@
     "vue-router": "^4.0.0-rc.1"
   },
   "devDependencies": {
+    "@fueled/eslint-config-frontend-web": "^2.1.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "^4.5.8",
@@ -20,23 +21,11 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
+    "eslint-config-esnext": "^4.1.0",
+    "eslint-plugin-vue": "^7.1.0",
+    "eslint-plugin-vue-a11y": "0.0.31",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.3"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
   },
   "browserslist": [
     "> 1%",
