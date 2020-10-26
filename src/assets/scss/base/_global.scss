@@ -4,6 +4,7 @@ body {
 }
 
 .main {
+    height: 100vh;
     position: relative;
     z-index: 100;
     background-image: linear-gradient(180deg, $primary-gradient, $secondary-gradient, $tertiary-gradient);
