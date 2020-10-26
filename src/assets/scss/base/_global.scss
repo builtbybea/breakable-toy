@@ -18,7 +18,10 @@ body {
         background-image: url('../images/stars.png');
         z-index: -1; 
     }
-    &--bright {
-        opacity: 0.5;
+    &--bright { 
+        &:before {
+            opacity: 0.75;
+        }
     }
+    
 }
