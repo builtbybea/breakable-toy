@@ -1,6 +1,8 @@
 <template>
   <div class="button">
-    <button>{{ text }}</button>
+    <button>
+      <p>{{ text }}</p>
+    </button>
   </div>
 </template>
 
@@ -14,6 +16,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+
 
 <style scoped>
 
