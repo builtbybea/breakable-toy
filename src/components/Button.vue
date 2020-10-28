@@ -2,18 +2,24 @@
   <div class="button">
     <button>
       <p>{{ text }}</p>
-      <img src="@/assets/images/arrow-icon.png" alt="arrow">{{ icon }}
+      <img src="@/assets/images/arrow-icon.png" alt="arrow">{{ iconAlign }}
     </button>
   </div>
 </template>
+
 
 <script>
 export default {
   name: 'button-component',
   props: { 
     text: String,
-    icon: String,
+    iconAlign: String,
   },
 };
 </script>
+
+
+<style scoped>
+
+</style>
 
