@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Title msg="Which Anime Character Are You?" />
-    <Button text="Start The Quiz" />
+    <Button text="Start The Quiz" icon />
   </div>
 </template>
 
