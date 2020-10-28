@@ -1,0 +1,9 @@
+button {
+  font-family: $button-font;
+  font-size: $font-size-default;
+  background-color: $accent;
+  color: $white;
+  &:hover {
+    background-color: $accent-hover;
+  }
+}
