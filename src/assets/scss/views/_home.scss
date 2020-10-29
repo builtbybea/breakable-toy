@@ -1,4 +1,8 @@
-@media screen and (min-width: 900px) {
+img {
+    margin: 10px;
+}
+
+@media screen and (min-width: 768px) {
     .home {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -11,7 +15,8 @@
     }
 };
 
-img {
-    margin: 1em;;
-}
-
+// @media screen and (max-width: 500px) {
+//     img {
+//         height: 250px;
+//     }
+// }
