@@ -1,28 +1,32 @@
 body {
-    font-size: $font-size-default;
-    margin: 0;
+  font-size: $font-size-default;
+  margin: 0;
 }
 
 .main {
-    height: 100vh;
-    position: relative;
-    z-index: 100;
-    background-image: linear-gradient(180deg, $primary-gradient, $secondary-gradient, $tertiary-gradient);
+  height: 100vh;
+  position: relative;
+  z-index: 100;
+  background-image: linear-gradient(
+    180deg,
+    $primary-gradient,
+    $secondary-gradient,
+    $tertiary-gradient
+  );
+  &:before {
+    content: " ";
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/stars.png");
+    z-index: -1;
+  }
+  &--bright {
     &:before {
-        content: " ";
-        background-size: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url('../images/stars.png');
-        z-index: -1; 
+      opacity: 0.75;
     }
-    &--bright { 
-        &:before {
-            opacity: 0.75;
-        }
-    }
-    
+  }
 }

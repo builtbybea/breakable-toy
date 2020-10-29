@@ -1,11 +1,11 @@
-$primary: #FFDB22;
+$primary: #ffdb22;
 $secondary: #232323;
-$accent: #EF597A;
-$accent-hover: #F8A8BA;
-$white: #FFFFFF;
+$accent: #ef597a;
+$accent-hover: #f8a8ba;
+$white: #ffffff;
 
-$h1-font: 'pocket_monkregular';
-$h2-font: 'pocket_monkregular';
+$h1-font: "pocket_monkregular";
+$h2-font: "pocket_monkregular";
 $h3-font: Poppins, sans-serif;
 $button-font: Poppins, sans-serif;
 
@@ -14,24 +14,24 @@ $font-size-medium: 42px;
 $font-size-small: 20px;
 $font-size-default: 16px;
 
-$primary-gradient: #53B1D4;
-$secondary-gradient: #9EDBDF;
-$tertiary-gradient: #D2C4DB;
+$primary-gradient: #53b1d4;
+$secondary-gradient: #9edbdf;
+$tertiary-gradient: #d2c4db;
 
 h1 {
-    font-family: $h1-font;
-    font-size: $font-size-large;
-    color: $primary;
+  font-family: $h1-font;
+  font-size: $font-size-large;
+  color: $primary;
 }
 
 h2 {
-    font-family: $h2-font;
-    font-size: $font-size-medium;
-    color: $primary;
+  font-family: $h2-font;
+  font-size: $font-size-medium;
+  color: $primary;
 }
 
 h3 {
-    font-family: $h3-font;
-    font-size: $font-size-small;
-    color: $secondary;
+  font-family: $h3-font;
+  font-size: $font-size-small;
+  color: $secondary;
 }
