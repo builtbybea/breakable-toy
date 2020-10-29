@@ -1,7 +1,13 @@
 <template>
   <div class="home">
-    <Title msg="Which Anime Character Are You?" />
-    <Button text="Start Quiz" />
+    <div class="figure">
+      <img src="../assets/images/sailor.png" alt="sailor-moon">
+      <img src="../assets/images/naruto.png" alt="naruto"> 
+    </div>
+    <div class="section">
+      <Title msg="Which Anime Character Are You?" />
+      <Button text="Start Quiz" />
+    </div>
   </div>
 </template>
 

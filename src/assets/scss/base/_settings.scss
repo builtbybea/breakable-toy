@@ -22,6 +22,7 @@ h1 {
   font-family: $h1-font;
   font-size: $font-size-large;
   color: $primary;
+  -webkit-text-stroke: 1px $secondary;
 }
 
 h2 {
