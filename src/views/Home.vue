@@ -9,18 +9,12 @@
 // @ is an alias to /src
 import Title from '@/components/Title.vue';
 import Button from '@/components/Button.vue';
-import Arrow from '@/assets/images/arrow-left.svg';
 
 export default {
   name: 'home-page',
   components: {
     Title,
     Button,
-  },
-  data() {
-    return {
-      icon: Arrow,
-    };
   },
 };
 </script>
