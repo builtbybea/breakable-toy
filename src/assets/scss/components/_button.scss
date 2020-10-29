@@ -1,8 +1,27 @@
-button {
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-family: $button-font;
   font-size: $font-size-default;
+  font-weight: bold;
   background-color: $accent;
   color: $white;
+  border: none;
+  border-radius: 50px;
+  width: 25%;
+  &--icon {
+    img {
+      padding: 1em;
+    }
+  }
+  &--left {
+    flex-direction: row-reverse;
+    padding-right: 45px;
+  }
+  &--right {
+    padding-left: 45px;
+  }
   &:hover {
     background-color: $accent-hover;
   }

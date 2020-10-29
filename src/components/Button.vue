@@ -1,10 +1,8 @@
 <template>
-  <div class="button">
-    <button>
-      <p>{{ text }}</p>
-      <img src="@/assets/images/arrow-icon.png" alt="arrow">{{ iconAlign }}
-    </button>
-  </div>
+  <button :class="['button', {'button--icon': icon,'button--left': align === 'left', 'button--right': align === 'right'} ]">
+    <p>{{ text }}</p>
+    <img v-if="icon" :src="icon" :alt="alt"> 
+  </button>
 </template>
 
 
@@ -13,7 +11,9 @@ export default {
   name: 'button-component',
   props: { 
     text: String,
-    iconAlign: String,
+    icon: String,
+    align: String,
+    alt: String, 
   },
 };
 </script>
