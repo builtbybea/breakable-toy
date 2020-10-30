@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="figure">
-      <img src="../assets/images/sailor.png" alt="sailor-moon">
-      <img src="../assets/images/naruto.png" alt="naruto"> 
+      <img class="shojo-img" src="../assets/images/sailor.png" alt="sailor-moon">
+      <img class="shonen-img" src="../assets/images/naruto.png" alt="naruto"> 
     </div>
     <div class="section">
       <Title msg="Which Anime Character Are You?" />
