@@ -2,7 +2,7 @@ img {
     margin: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@include min-width(bp(s)) {
     .home {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -15,8 +15,14 @@ img {
     }
 };
 
-// @media screen and (max-width: 500px) {
-//     img {
-//         height: 250px;
-//     }
-// }
+@include max-width(bp(s)) {
+    img {
+        height: 200px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    .button {
+        margin-bottom: 1em;
+    }
+}

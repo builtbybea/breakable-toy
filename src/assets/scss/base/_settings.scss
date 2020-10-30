@@ -39,3 +39,13 @@ h3 {
   font-size: $font-size-small;
   color: $secondary;
 }
+
+// Media Queries
+$breakpoints: (
+  xxs:  0 * 16,
+  xs:  330, // 512
+  s:   48 * 16, // 768
+  m:   64 * 16, // 1024
+  l:   96 * 16, // 1536
+  xl: 102 * 16  // 1632
+);
