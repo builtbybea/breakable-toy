@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <div class="figure">
-      <img class="shojo-img" src="../assets/images/sailor.png" alt="sailor-moon">
-      <img class="shonen-img" src="../assets/images/naruto.png" alt="naruto"> 
+    <div class="home__images">
+      <img class="home--image1" src="../assets/images/sailor.png" alt="sailor-moon">
+      <img class="home--image2" src="../assets/images/naruto.png" alt="naruto"> 
     </div>
-    <div class="section">
-      <Title msg="Which Anime Character Are You?" />
-      <Button text="Start Quiz" />
+    <div class="home__content">
+      <Title class="home__header" msg="Which Anime Character Are You?" />
+      <Button class="home__button" text="Start Quiz" />
     </div>
   </div>
 </template>
