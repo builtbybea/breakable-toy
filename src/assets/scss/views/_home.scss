@@ -1,0 +1,30 @@
+@include min-width(bp(s)) {
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column wrap;
+        }
+        &--image1 {
+            margin-right: 1em;
+        }
+        &--image2 {
+            margin-top: 1.5em;
+            float: right;
+        }
+    }
+};
+
+@include max-width(bp(s)) {
+    .home {
+        &--image1, &--image2 {
+            height: 200px;
+        }
+        &__button {
+            margin-bottom: 2em;
+        }
+    }
+}
