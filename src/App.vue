@@ -7,6 +7,12 @@
       <router-link to="/about">
         About
       </router-link>
+      <router-link to="/quiz/start">
+        Quiz
+      </router-link>
+      <router-link to="/results">
+        Results
+      </router-link>
     </div>
     <router-view />
   </div>

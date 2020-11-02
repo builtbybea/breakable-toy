@@ -12,6 +12,16 @@ const routes = [
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
+  {
+    path: '/quiz/:id',
+    name: 'Quiz',
+    component: () => import(/*webpackChunkName: "quiz"*/ '../views/Quiz.vue'),
+  },
+  {
+    path: '/results',
+    name: 'Results',
+    component: () => import(/*webpackChuckName: "results"*/ '../views/Results.vue'),
+  },
 ];
 
 const router = createRouter({
