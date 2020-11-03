@@ -1,0 +1,176 @@
+{
+    "questions" : [
+        {
+            "id": 1,
+            "type": "multi-answer-multi-choice",
+            "question": "What Are Your Favourity Genres To Watch",
+            "subtitle": "Choose up to 3",
+            "choices": [
+                {
+                    "text": "Action",
+                    "score": {
+                        "Sailor Moon": 5,
+                        "Spike Spiegel": 10,
+                        "Goku": 20,
+                        "Michiko": 15,
+                        "Monkey D. Luffy": 25
+                    }
+                },
+                {
+                    "text": "Comedy"
+                },
+                {
+                    "text": "Magic"
+                },
+                {
+                    "text": "Adventure"
+                },
+                {
+                    "text": "Drama"
+                },
+                {
+                    "text": "Slice of Life"
+                },
+                {
+                    "text": "Fantasy"
+                },
+                {
+                    "text": "Romance"
+                },
+                {
+                    "text": "Supernatural"
+                },
+                {
+                    "text": "Mystery"
+                },
+                {
+                    "text": "Horror"
+                },
+                {
+                    "text": "Sci-fi"
+                },
+                {
+                    "text": "Psychological"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "type": "image-choice",
+            "question": "If You Could Only Eat One Food For The Rest Of Your Life, What Would It Be?",
+            "choices":[
+                {
+                    "text": "Onigiri"
+                },
+                {
+                    "text": "Yaki Dango"
+                },
+                {
+                    "text": "Ramen"
+                },
+                {
+                    "text": "Katsudon "
+                },
+                {
+                    "text": "Kare Raisu"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "type": "single-answer-multi-choice",
+            "question": "You Just Won The Biggest Lottery Ever. What Do You Spend It On?",
+            "choices":[
+                {
+                    "text": "A Big Feast"
+                },
+                {
+                    "text": "Lavish Clothes"
+                },
+                {
+                    "text": "My Friends/Family"
+                },
+                {
+                    "text": "I JUST WANNA FIGHT"
+                },
+                {
+                    "text": "Lottery?! One Piece Is The Ulitmate Prize"
+                },
+                {
+                    "text": "Something Obsecure"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "type":"image-choice",
+            "question": "You Stumble Upon A Notebook On The Ground. Do You...?",
+            "choices":[
+                 {
+                     "text": "Take The Notebook"
+                 },
+                 {
+                     "text": "Toss The Notebook In The Bin"
+                 }
+            ]
+        },
+        {
+            "id": 5,
+            "type": "slider-scale",
+            "question": "How Would You Rate Ninjas?",
+            "choices": [
+                {
+                    "text": "Meh"
+                },
+                {
+                    "text": "Love ninjas"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "type": "star-rating",
+            "question": "How Would You Rate Studio Ghibli Films",
+            "choices" : [
+                {
+                    "rating": 1
+                },
+                {
+                    "rating": 2
+                },
+                {
+                    "rating": 3
+                },
+                {
+                    "rating": 4
+                },
+                {
+                    "rating": 5
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "type": "single-answer-multi-choice",
+            "question": "Explain yourself in one word",
+            "choices": [
+                {
+                    "text": "Empathetic"
+                },
+                {
+                    "text": "Energetic"
+                },
+                {
+                    "text": "Lazy"
+                },
+                {
+                    "text": "Wild Spirit"
+                },
+                {
+                    "text": "Carefree, Happy-Go-Lucky"
+                }
+            ]
+        }
+    ]
+    
+}
