@@ -1,7 +1,7 @@
 <template>
   <div class="quiz">
     <Title msg="What Are Your Favourite Genres To Watch?" />
-    <InputButton text="Action" type="radio" />
+    <InputButton text="Action" type="checkbox" />
   </div>
 </template>
 

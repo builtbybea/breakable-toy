@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input v-if="type" id="answer" :type="type">
+    <input id="answer" :type="type">
     <label for="answer">{{ text }}</label>
   </div>
 </template>
