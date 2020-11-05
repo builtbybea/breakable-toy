@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'input-button-type',
+  name: 'custom-input',
   props: {
     text: String,
     type: String,
