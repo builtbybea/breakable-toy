@@ -1,7 +1,7 @@
 <template>
   <div class="quiz">
     <Title msg="What Are Your Favourite Genres To Watch?" />
-    <CustomInput text="Action" type="checkbox" />
+    <CustomInput text="Action" type="checkbox" @get-selected="selectedAnswer" />
   </div>
 </template>
 
@@ -13,6 +13,12 @@ export default {
   components: {
     Title,
     CustomInput,
+  },
+
+  methods: {
+    selectedAnswer(value) {
+      console.log(value);
+    },
   },
 };
 </script>
