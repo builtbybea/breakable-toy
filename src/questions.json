@@ -1,0 +1,413 @@
+{
+    "questions" : [
+        {
+            "id": 1,
+            "type": "multi-answer-multi-choice",
+            "question": "What Are Your Favourite Genres To Watch",
+            "subtitle": "Choose up to 3",
+            "choices": [
+                {
+                    "text": "Action",
+                    "value": "action",
+                    "score": {
+                        "Sailor Moon": 5,
+                        "Spike Spiegel": 10,
+                        "Goku": 25,
+                        "Michiko": 15,
+                        "Monkey D. Luffy": 20
+                    }
+                },
+                {
+                    "text": "Comedy",
+                    "value": "comedy",
+                    "score": {
+                        "Sailor Moon": 5,
+                        "Spike Spiegel": 0,
+                        "Goku": 10,
+                        "Michiko": 5,
+                        "Monkey D. Luffy": 20
+                    }
+                },
+                {
+                    "text": "Magic",
+                    "value": "magic",
+                    "score": {
+                        "Sailor Moon": 25,
+                        "Spike Spiegel": 0,
+                        "Goku": 10,
+                        "Michiko": 0,
+                        "Monkey D. Luffy": 10
+                    }
+                },
+                {
+                    "text": "Adventure",
+                    "value": "adventure",
+                    "score": {
+                        "Sailor Moon": 5,
+                        "Spike Spiegel": 10,
+                        "Goku": 20,
+                        "Michiko": 15,
+                        "Monkey D. Luffy": 25
+                    }
+                },
+                {
+                    "text": "Drama",
+                    "value": "drama",
+                    "score": {
+                        "Sailor Moon": 20,
+                        "Spike Spiegel": 10,
+                        "Goku": 5,
+                        "Michiko": 25,
+                        "Monkey D. Luffy": 15
+                    }
+                },
+                {
+                    "text": "Fantasy",
+                    "value": "fantasy",
+                    "score": {
+                        "Sailor Moon": 20,
+                        "Spike Spiegel": 10,
+                        "Goku": 5,
+                        "Michiko": 25,
+                        "Monkey D. Luffy": 15
+                    }
+                },
+                {
+                    "text": "Romance",
+                    "value": "romance",
+                    "score": {
+                        "Sailor Moon": 20,
+                        "Spike Spiegel": 0,
+                        "Goku": 0,
+                        "Michiko": 0,
+                        "Monkey D. Luffy": 0
+                    }
+                },
+                {
+                    "text": "Sci-fi",
+                    "value": "sci-fi",
+                    "score": {
+                        "Sailor Moon": 20,
+                        "Spike Spiegel": 10,
+                        "Goku": 5,
+                        "Michiko": 25,
+                        "Monkey D. Luffy": 15
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "type": "image-choice",
+            "question": "If You Could Only Eat One Food For The Rest Of Your Life, What Would It Be?",
+            "choices":[
+                {
+                    "text": "Onigiri",
+                    "value": "onigiri",
+                    "score": {
+                        "Sailor Moon": 25,
+                        "Spike Spiegel": 0,
+                        "Goku": 20,
+                        "Michiko": 5,
+                        "Monkey D. Luffy": 10
+                    }
+                },
+                {
+                    "text": "Gyoza",
+                    "value": "gyoza",
+                    "score": {
+                        "Sailor Moon": 5,
+                        "Spike Spiegel": 0,
+                        "Goku": 10,
+                        "Michiko": 25,
+                        "Monkey D. Luffy": 10
+                    }
+                },
+                {
+                    "text": "Bell Peppers And Beef",
+                    "value": "bell peppers and beef",
+                    "score": {
+                        "Sailor Moon": 0,
+                        "Spike Spiegel": 25,
+                        "Goku": 0,
+                        "Michiko": 0,
+                        "Monkey D. Luffy": 0
+                    }
+                },
+                {
+                    "text": "Burgers",
+                    "value": "burgers",
+                    "score": {
+                        "Sailor Moon": 20,
+                        "Spike Spiegel": 10,
+                        "Goku": 5,
+                        "Michiko": 25,
+                        "Monkey D. Luffy": 15
+                    }
+                },
+                {
+                    "text": "Kare Raisu",
+                    "value": "kare raisu",
+                    "score": {
+                        "Sailor Moon": 10,
+                        "Spike Spiegel": 5,
+                        "Goku": 25,
+                        "Michiko": 15,
+                        "Monkey D. Luffy": 20
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "type": "single-answer-multi-choice",
+            "question": "You Just Won The Biggest Lottery Ever. What Do You Spend It On?",
+            "choices":[
+                {
+                    "text": "A Big Feast",
+                    "value": "a big feast",
+                    "score": {
+                        "Sailor Moon": 25,
+                        "Spike Spiegel": 25,
+                        "Goku": 25,
+                        "Michiko": 25,
+                        "Monkey D. Luffy": 25
+                    }
+                },
+                {
+                    "text": "Lavish Clothes",
+                    "value": "lavish clothes",
+                    "score": {
+                        "Sailor Moon": 25,
+                        "Spike Spiegel": 0,
+                        "Goku": 0,
+                        "Michiko": 25,
+                        "Monkey D. Luffy": 0
+                    }
+                },
+                {
+                    "text": "My Friends/Family",
+                    "value": "my friends/family",
+                    "score": {
+                        "Sailor Moon": 25,
+                        "Spike Spiegel": 0,
+                        "Goku": 20,
+                        "Michiko": 5,
+                        "Monkey D. Luffy": 15
+                    }
+                },
+                {
+                    "text": "I JUST WANNA FIGHT",
+                    "value": "i just wanna fight",
+                    "score":{
+                        "Sailor Moon": 0,
+                        "Spike Spiegel": 5,
+                        "Goku": 25,
+                        "Michiko": 20,
+                        "Monkey D. Luffy": 25
+                    }
+                },
+                {
+                    "text": "Lottery?! One Piece Is The Ulitmate Prize",
+                    "value": "lottery?! one piece is the ultimate prize",
+                    "score":{
+                        "Sailor Moon": 10,
+                        "Spike Spiegel": 5,
+                        "Goku": 25,
+                        "Michiko": 15,
+                        "Monkey D. Luffy": 25
+                    }
+                },
+                {
+                    "text": "Something Obsecure",
+                    "value": "something obsecure",
+                    "score":{
+                        "Sailor Moon": 0,
+                        "Spike Spiegel": 25,
+                        "Goku": 0,
+                        "Michiko": 20,
+                        "Monkey D. Luffy": 15
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "type":"image-choice",
+            "question": "You Stumble Upon A Notebook On The Ground. Do You...?",
+            "choices":[
+                 {
+                     "text": "Take The Notebook",
+                     "value": "take the notebook",
+                     "score":{
+                         "Light Yagami": 100
+                     }
+                 },
+                 {
+                     "text": "Toss The Notebook In The Bin",
+                     "value": "toss the notebook in the bin",
+                     "score":{
+                        "Sailor Moon": 20,
+                        "Spike Spiegel": 10,
+                        "Goku": 5,
+                        "Michiko": 15,
+                        "Monkey D. Luffy": 0
+                     }
+                 }
+            ]
+        },
+        {
+            "id": 5,
+            "type": "slider-scale",
+            "question": "How Would You Rate Space?",
+            "choices": [
+                {
+                    "text": "Meh",
+                    "value": "meh",
+                    "score": {
+                        "Sailor Moon": 0,
+                        "Spike Spiegel": 0,
+                        "Goku": 5,
+                        "Michiko": 10,
+                        "Monkey D. Luffy": 15
+                    }
+                },
+                {
+                    "text": "Love space",
+                    "value": "love space",
+                    "score": {
+                        "Sailor Moon": 20,
+                        "Spike Spiegel": 25,
+                        "Goku": 15,
+                        "Michiko": 0,
+                        "Monkey D. Luffy": 5
+                    }
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "type": "star-rating",
+            "question": "How Would You Rate Studio Ghibli Films",
+            "choices" : [
+                {
+                    "rating": 1,
+                    "value": 1,
+                    "score": {
+                        "Sailor Moon": 0,
+                        "Spike Spiegel": 0,
+                        "Goku": 25,
+                        "Michiko": 0,
+                        "Monkey D. Luffy": 20
+                    }
+                },
+                {
+                    "rating": 2,
+                    "value": 2,
+                    "score": {
+                        "Sailor Moon": 5,
+                        "Spike Spiegel": 5,
+                        "Goku": 20,
+                        "Michiko": 5,
+                        "Monkey D. Luffy": 20
+                    }
+                },
+                {
+                    "rating": 3,
+                    "value": 3,
+                    "score": {
+                        "Sailor Moon": 10,
+                        "Spike Spiegel": 5,
+                        "Goku": 15,
+                        "Michiko": 10,
+                        "Monkey D. Luffy": 15
+                    }
+                },
+                {
+                    "rating": 4,
+                    "value": 4,
+                    "score": {
+                        "Sailor Moon": 15,
+                        "Spike Spiegel": 10,
+                        "Goku": 5,
+                        "Michiko": 10,
+                        "Monkey D. Luffy": 5
+                    }
+                },
+                {
+                    "rating": 5,
+                    "score": {
+                        "Sailor Moon": 25,
+                        "Spike Spiegel": 10,
+                        "Goku": 5,
+                        "Michiko": 15,
+                        "Monkey D. Luffy": 5
+                    }
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "type": "single-answer-multi-choice",
+            "question": "Explain yourself in one word",
+            "choices": [
+                {
+                    "text": "Empathetic",
+                    "value": "empathetic",
+                    "score": {
+                        "Sailor Moon": 25,
+                        "Spike Spiegel": 0,
+                        "Goku": 10,
+                        "Michiko": 10,
+                        "Monkey D. Luffy": 10
+                    }
+                },
+                {
+                    "text": "Energetic",
+                    "value": "energetic",
+                    "score": {
+                        "Sailor Moon": 10,
+                        "Spike Spiegel": 0,
+                        "Goku": 25,
+                        "Michiko": 0,
+                        "Monkey D. Luffy": 20
+                    }
+                },
+                {
+                    "text": "Nonchalant",
+                    "value": "nonchalant",
+                    "score": {
+                        "Sailor Moon": 0,
+                        "Spike Spiegel": 25,
+                        "Goku": 5,
+                        "Michiko": 20,
+                        "Monkey D. Luffy": 0
+                    }
+                },
+                {
+                    "text": "Wild Spirit",
+                    "value": "wild spirit",
+                    "score": {
+                        "Sailor Moon": 0,
+                        "Spike Spiegel": 0,
+                        "Goku": 10,
+                        "Michiko": 25,
+                        "Monkey D. Luffy": 10
+                    }
+                },
+                {
+                    "text": "Carefree, Happy-Go-Lucky",
+                    "value": "carefree, happy-go-lucky",
+                    "score": {
+                        "Sailor Moon": 5,
+                        "Spike Spiegel": 20,
+                        "Goku": 20,
+                        "Michiko": 0,
+                        "Monkey D. Luffy": 25
+                    }
+                }
+            ]
+        }
+    ]
+    
+}
