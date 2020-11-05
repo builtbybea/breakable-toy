@@ -1,0 +1,19 @@
+.label {
+    display: inline-block;
+    background-color: $white;
+    font-family: $button-font;
+    font-size: $font-size-default;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 0.5em;
+    &--checkbox {
+        color: $accent;
+        width: 100px;
+    }
+    &--radio {
+        color: $secondary;
+        width: 250px;
+    }
+}
+

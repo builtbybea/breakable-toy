@@ -1,7 +1,9 @@
 <template>
   <div>
-    <input id="answer" :type="type">
-    <label for="answer">{{ text }}</label>
+    <label for="answer" :class="['label', {'label--checkbox' :type === 'checkbox','label--radio' :type === 'radio'}]">
+      <input id="answer" :type="type" @model="selectedOption" @change="selectedAnswer">
+      {{ text }}
+    </label>
   </div>
 </template>
 
@@ -11,6 +13,12 @@ export default {
   props: {
     text: String,
     type: String,
+  },
+
+  methods: {
+    selectedAnswer(value) {
+      this.$emit('get-selected', value);
+    },
   },
 };
 </script>
