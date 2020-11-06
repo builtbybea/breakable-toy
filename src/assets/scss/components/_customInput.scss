@@ -1,9 +1,9 @@
 .custom-input {
+    input[type=checkbox]:checked ~ label {
+        border: 2px $accent solid;
+    }
     &__button {
         display: none;
-        &:checked ~ label {
-            border: 2px $accent solid;
-        }
     }
     &__label {
         display: inline-block;
