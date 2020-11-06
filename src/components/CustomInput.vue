@@ -1,7 +1,13 @@
 <template>
-  <div>
-    <label for="answer" :class="['label', {'label--checkbox' :type === 'checkbox','label--radio' :type === 'radio'}]">
-      <input id="answer" :type="type" @model="selectedOption" @change="selectedAnswer">
+  <div class="custom-input">
+    <input 
+      id="answer" 
+      class="custom-input__button" 
+      :type="type" 
+      @model="selectedOption" 
+      @change="selectedAnswer"
+    > 
+    <label for="answer" :class="['custom-input__label', {'custom-input__label--checkbox' :type === 'checkbox','custom-input__label--radio' :type === 'radio'}]">
       {{ text }}
     </label>
   </div>
