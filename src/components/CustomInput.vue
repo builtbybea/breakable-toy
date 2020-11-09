@@ -8,6 +8,7 @@
       @change="selectedAnswer"
     > 
     <label for="answer" :class="['custom-input__label', {'custom-input__label--checkbox' :type === 'checkbox','custom-input__label--radio' :type === 'radio'}]">
+      <span class="custom-input__label--customradio" />
       {{ text }}
     </label>
   </div>
