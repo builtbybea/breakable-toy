@@ -2,8 +2,9 @@
     input[type=checkbox]:checked ~ label {
         border: 2px $accent solid;
     }
+    /*Hide browser's default input buttons*/
     &__button {
-        display: none;
+        opacity: 0;
     }
     &__label {
         display: inline-flex;
@@ -15,6 +16,7 @@
         border-radius: 50px;
         padding: 0.7em;
         align-items: center;
+
         &--checkbox {
             color: $accent;
             width: 100px;
@@ -25,29 +27,34 @@
             width: 250px;
             justify-content: left;
         }
+
+          /*Custom radio button*/
+        &--customradio {
+             position: relative;
+             z-index: 1;
+             height: 15px;
+             width: 15px;
+             border-radius: 50%;
+             border: 3.5px solid $accent;
+             margin: 0 10px 0 5px;
+        }
+
+        /*Custom radio button dot*/
+        &--customradio:hover:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            background-color: $accent;
+            top: 2px;
+            left: 3px;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+        }
     }
 }
 
-/* Custom radio container*/
-span {
-    position: relative;
-    z-index: 1;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    border: 3.5px solid $accent;
-    margin: 0 10px 0 5px;
-}
 
-span:hover:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    background-color: $accent;
-    top: 2px;
-    left: 3px;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-}
+
+
 
