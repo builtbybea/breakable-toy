@@ -17,6 +17,8 @@
         &--checkbox {
             color: $accent;
             width: 100px;
+            justify-content: center;
+            align-items: center;
         }
         &--radio {
             color: $secondary;
