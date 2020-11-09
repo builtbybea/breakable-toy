@@ -1,7 +1,7 @@
 <template>
   <div class="quiz">
     <Title msg="What Are Your Favourite Genres To Watch?" />
-    <CustomInput text="Action" type="radio" @get-selected="selectedAnswer" />
+    <CustomInput text="A Big Feast" type="radio" @get-selected="selectedAnswer" />
   </div>
 </template>
 
