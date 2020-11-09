@@ -26,3 +26,11 @@
     }
 }
 
+span {
+    display: inline-flex;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid green;
+    margin: 5px;
+}
