@@ -8,13 +8,19 @@
 <script>
 import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
+import quiz from '@/questions.json';
 export default {
   name: 'quiz-page',
   components: {
     Title,
     CustomInput,
   },
-
+  computed: {
+    getQuestions() {
+      const routeId = this.$route.params.id;
+      return quiz.questions[routeId + 1];
+    },
+  },
   methods: {
     selectedAnswer(value) {
       console.log(value);
