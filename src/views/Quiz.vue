@@ -1,7 +1,13 @@
 <template>
   <div class="quiz">
     <Title msg="What Are Your Favourite Genres To Watch?" />
-    <CustomInput text="Action" type="checkbox" @get-selected="selectedAnswer" />
+    <CustomInput 
+      v-for="question in questions" 
+      :key="question" 
+      text="Action" 
+      type="checkbox" 
+      @get-selected="selectedAnswer" 
+    />
   </div>
 </template>
 
@@ -14,6 +20,11 @@ export default {
   components: {
     Title,
     CustomInput,
+  },
+  data() {
+    return {
+      questions: quiz,
+    };
   },
   computed: {
     getQuestions() {
