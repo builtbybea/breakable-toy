@@ -7,7 +7,7 @@
       <router-link to="/about">
         About
       </router-link>
-      <router-link to="/quiz/start">
+      <router-link to="/quiz/1">
         Quiz
       </router-link>
       <router-link to="/results">
