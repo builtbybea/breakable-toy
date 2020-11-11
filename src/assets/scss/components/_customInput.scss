@@ -1,5 +1,5 @@
 .custom-input {
-    display: inline-flex;
+    display: inline-grid;
     margin: 2.5px;
     input[type=checkbox]:checked ~ label {
         border: 2px $accent solid;
@@ -24,12 +24,12 @@
         align-items: center;
         &--checkbox {
             color: $accent;
-            width: 100px;
+            width: 7em;
             justify-content: center;
         }
         &--radio {
             color: $secondary;
-            width: 250px;
+            width: 25em;
             justify-content: left;
             position: relative;
             /*Faux radio input border*/
