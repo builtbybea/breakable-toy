@@ -237,14 +237,14 @@
             "question": "You Stumble Upon A Notebook On The Ground. Do You...?",
             "choices":[
                  {
-                     "text": "Take The Notebook",
+                     "text": "Take The Notebook 📓",
                      "value": "take the notebook",
                      "score":{
                          "Light Yagami": 100
                      }
                  },
                  {
-                     "text": "Toss The Notebook In The Bin",
+                     "text": "Toss The Notebook In The Bin 🗑️",
                      "value": "toss the notebook in the bin",
                      "score":{
                         "Sailor Moon": 20,
