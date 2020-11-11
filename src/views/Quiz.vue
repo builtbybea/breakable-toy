@@ -1,7 +1,6 @@
 <template>
   <div class="quiz">
-    <Title :msg="getQuestions.question" />
-    <h3>{{ getQuestions.subtitle }}</h3>
+    <Title :msg="getQuestions.question" :subtitle="getQuestions.subtitle" />
     <CustomInput
       v-for="(option, key) in getQuestions.choices"
       :key="key"
