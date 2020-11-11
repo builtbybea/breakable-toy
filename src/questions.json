@@ -3,7 +3,7 @@
         {
             "id": 1,
             "type": "multi-answer-multi-choice",
-            "question": "What Are Your Favourite Genres To Watch",
+            "question": "What Are Your Favourite Genres To Watch?",
             "subtitle": "Choose up to 3",
             "choices": [
                 {
@@ -409,5 +409,4 @@
             ]
         }
     ]
-    
 }

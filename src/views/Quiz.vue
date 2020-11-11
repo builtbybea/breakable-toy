@@ -1,35 +1,44 @@
 <template>
   <div class="quiz">
-    <Title msg="What Are Your Favourite Genres To Watch?" />
-    <CustomInput 
-      v-for="question in questions" 
-      :key="question" 
-      text="Action" 
-      type="checkbox" 
-      @get-selected="selectedAnswer" 
+    <Title :msg="getQuestions.question" />
+
+    <CustomInput
+      v-for="(option, key) in getQuestions.choices"
+      :key="key"
+      :text="option.text"
+      :type="inputType[getQuestions.type]"
+      @get-selected="selectedAnswer"
     />
+    <pre>{{ getQuestions }}</pre>
   </div>
 </template>
 
 <script>
 import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
-import quiz from '@/questions.json';
+import { questions } from '@/questions.json';
+import { inputType } from '@/mapInputs.js';
+
 export default {
   name: 'quiz-page',
   components: {
     Title,
     CustomInput,
   },
+
   data() {
     return {
-      questions: quiz,
+      inputType,
     };
   },
+
   computed: {
     getQuestions() {
       const routeId = this.$route.params.id;
-      return quiz.questions[routeId + 1];
+
+      // the routeId is 1
+      // our array is 0
+      return questions[routeId - 1];
     },
   },
   methods: {
