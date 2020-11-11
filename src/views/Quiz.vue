@@ -9,7 +9,7 @@
       :type="inputType[getQuestions.type]"
       @get-selected="selectedAnswer"
     />
-    <pre>{{ getQuestions }}</pre>
+    <!-- <pre>{{ getQuestions }}</pre> -->
   </div>
 </template>
 
@@ -35,9 +35,9 @@ export default {
   computed: {
     getQuestions() {
       const routeId = this.$route.params.id;
-
+      // Routes each Question to a new page and add question id to each of url
       // the routeId is 1
-      // our array is 0
+      // our array starts at 0
       return questions[routeId - 1];
     },
   },

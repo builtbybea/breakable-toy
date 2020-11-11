@@ -5,7 +5,6 @@
       :value="text"
       class="custom-input__button" 
       :type="type" 
-      @model="selectedOption" 
       @change="selectedAnswer"
     > 
     <label :for="name" :class="['custom-input__label', {'custom-input__label--checkbox' :type === 'checkbox','custom-input__label--radio' :type === 'radio'}]">
