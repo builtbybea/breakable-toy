@@ -2,7 +2,8 @@
     display: inline-grid;
     margin: 2.5px;
     input[type=checkbox]:checked ~ label {
-        border: 2px $accent solid;
+        // border: 2px $accent solid;
+        box-shadow: inset 0 0 0 2px $accent;
     }
     /*Adds checked effect to faux radio input button*/
     input[type=radio]:checked ~ .custom-input__label--radio:after{
