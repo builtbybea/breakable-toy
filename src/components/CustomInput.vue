@@ -1,14 +1,14 @@
 <template>
   <div class="custom-input">
     <input 
-      :id="name" 
+      :id="text" 
       :value="text"
       class="custom-input__button" 
       :type="type" 
-      @model="selectedOption" 
+      :name="name"
       @change="selectedAnswer"
     > 
-    <label :for="name" :class="['custom-input__label', {'custom-input__label--checkbox' :type === 'checkbox','custom-input__label--radio' :type === 'radio'}]">
+    <label :for="text" :class="['custom-input__label', {'custom-input__label--checkbox' :type === 'checkbox','custom-input__label--radio' :type === 'radio'}]">
       {{ text }}
     </label>
   </div>

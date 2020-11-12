@@ -3,8 +3,8 @@
         {
             "id": 1,
             "type": "multi-answer-multi-choice",
-            "question": "What Are Your Favourite Genres To Watch",
-            "subtitle": "Choose up to 3",
+            "question": "What Are Your Favourite Genres To Watch?",
+            "subtitle": "(Choose up to 3)",
             "choices": [
                 {
                     "text": "Action",
@@ -237,14 +237,14 @@
             "question": "You Stumble Upon A Notebook On The Ground. Do You...?",
             "choices":[
                  {
-                     "text": "Take The Notebook",
+                     "text": "Take The Notebook 📓",
                      "value": "take the notebook",
                      "score":{
                          "Light Yagami": 100
                      }
                  },
                  {
-                     "text": "Toss The Notebook In The Bin",
+                     "text": "Toss The Notebook In The Bin 🗑️",
                      "value": "toss the notebook in the bin",
                      "score":{
                         "Sailor Moon": 20,
@@ -291,7 +291,7 @@
             "question": "How Would You Rate Studio Ghibli Films",
             "choices" : [
                 {
-                    "rating": 1,
+                    "text": 1,
                     "value": 1,
                     "score": {
                         "Sailor Moon": 0,
@@ -302,7 +302,7 @@
                     }
                 },
                 {
-                    "rating": 2,
+                    "text": 2,
                     "value": 2,
                     "score": {
                         "Sailor Moon": 5,
@@ -313,7 +313,7 @@
                     }
                 },
                 {
-                    "rating": 3,
+                    "text": 3,
                     "value": 3,
                     "score": {
                         "Sailor Moon": 10,
@@ -324,7 +324,7 @@
                     }
                 },
                 {
-                    "rating": 4,
+                    "text": 4,
                     "value": 4,
                     "score": {
                         "Sailor Moon": 15,
@@ -335,7 +335,7 @@
                     }
                 },
                 {
-                    "rating": 5,
+                    "text": 5,
                     "score": {
                         "Sailor Moon": 25,
                         "Spike Spiegel": 10,
@@ -409,5 +409,4 @@
             ]
         }
     ]
-    
 }
