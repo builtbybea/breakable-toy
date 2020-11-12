@@ -9,12 +9,17 @@
       name="option"
       @get-selected="selectedAnswer"
     />
+    <Button text="Previous" align="left" :icon="iconLeft" />
+    <Button text="Next" align="right" :icon="iconRight" />
   </div>
 </template>
 
 <script>
 import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
+import Button from '@/components/Button';
+import ArrowRight from '@/assets/images/arrow-right.svg';
+import ArrowLeft from '@/assets/images/arrow-left.svg';
 import { questions } from '@/questions.json';
 import { inputType } from '@/mapInputs.js';
 
@@ -23,11 +28,14 @@ export default {
   components: {
     Title,
     CustomInput,
+    Button,
   },
 
   data() {
     return {
       inputType,
+      iconRight: ArrowRight,
+      iconLeft: ArrowLeft,
     };
   },
 
