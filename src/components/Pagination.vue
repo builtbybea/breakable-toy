@@ -1,14 +1,14 @@
 <template>
   <div>
     <Button 
-      :disabled="currentPage === 0" 
+      :disabled="routeId === 1" 
       text="Previous" 
       align="left" 
       :icon="iconLeft"
       @click="prevPage"
     />
     <Button
-      :disabled="currentPage === pageCount" 
+      :disabled="routeId === this.$route.params.id" 
       text="Next" 
       align="right" 
       :icon="iconRight"
@@ -34,7 +34,7 @@ export default {
       questions,
       iconRight: ArrowRight,
       iconLeft: ArrowLeft,
-      currentPage: 0,
+      // currentPage: 1,
     };
   },
 
@@ -49,12 +49,14 @@ export default {
   //Functions for navigating between page questions
   methods: {
     nextPage() {
-      const routeId = this.currentPage++;
-      return this.$router.push({ path: `/quiz/${routeId}` });    
+      const routeId = this.$route.params.id++;
+      return this.$router.push({ params: routeId  });    
     },
     prevPage() {
-      if(this.questions.length > 0);
-      return this.currentPage--;
+      // if(this.questions.length > 0);
+      // return this.currentPage--;
+      const routeId = this.$route.params.id--;
+      return this.$router.push({ params: routeId  }); 
     },
   },
   
