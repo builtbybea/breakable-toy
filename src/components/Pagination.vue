@@ -1,13 +1,19 @@
 <template>
   <div>
     <Button 
-      :click="prevPage"
       :disabled="currentPage === 0" 
       text="Previous" 
       align="left" 
       :icon="iconLeft"
+      @click="prevPage"
     />
-    <Button :click="nextPage" text="Next" align="right" :icon="iconRight" />
+    <Button
+      :disabled="currentPage === pageCount" 
+      text="Next" 
+      align="right" 
+      :icon="iconRight"
+      @click="nextPage"
+    />
   </div>
 </template>
 
@@ -25,6 +31,7 @@ export default {
 
   data () {
     return {
+      questions,
       iconRight: ArrowRight,
       iconLeft: ArrowLeft,
       currentPage: 0,
@@ -34,17 +41,17 @@ export default {
   //Function to count the amount of questions in JSON and equal this to the number of pages
   computed: {
     pageCount() {
-      const pageNum = this.questions.id.length;
-      return questions[pageNum];
+      const pageNum = this.$route.params.id;
+      return pageNum;
     },
   },
 
   //Functions for navigating between page questions
   methods: {
     nextPage() {
-      if(this.currentPage < this.questions.id.length);
-      return this.currentPage++;
-          
+      // if(this.currentPage < this.questions.id.length);
+      // return this.currentPage++;
+      return this.$router.push({ path: '/quiz/2' });    
     },
     prevPage() {
       if(this.questions.length > 0);
