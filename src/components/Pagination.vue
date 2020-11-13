@@ -49,9 +49,7 @@ export default {
   //Functions for navigating between page questions
   methods: {
     nextPage() {
-      // if(this.currentPage < this.questions.id.length);
-      // return this.currentPage++;
-      const routeId = 2;
+      const routeId = this.currentPage++;
       return this.$router.push({ path: `/quiz/${routeId}` });    
     },
     prevPage() {
