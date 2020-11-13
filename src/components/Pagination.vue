@@ -51,7 +51,8 @@ export default {
     nextPage() {
       // if(this.currentPage < this.questions.id.length);
       // return this.currentPage++;
-      return this.$router.push({ path: '/quiz/2' });    
+      const routeId = 2;
+      return this.$router.push({ path: `/quiz/${routeId}` });    
     },
     prevPage() {
       if(this.questions.length > 0);
