@@ -42,13 +42,13 @@ export default {
       const pageNum = this.$route.params.id;
       return pageNum;
     },
-    isDisabled(){
-      const pageNum = this.$route.params.id;
-      if(pageNum >= 1){
-        return true;
-      }
-      return false;
-    },
+    // isDisabled(){
+    //   const pageNum = this.$route.params.id;
+    //   if(pageNum >= 1){
+    //     return true;
+    //   }
+    //   return false;
+    // },
   },
 
   //Functions for navigating between page questions
