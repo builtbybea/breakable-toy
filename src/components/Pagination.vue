@@ -1,13 +1,14 @@
 <template>
   <div>
     <Button 
-      :disabled="isDisabled"
+      :disabled="isFirstQuestion"
       text="Previous"
       align="left" 
       :icon="iconLeft"
       @click="prevPage"
     />
     <Button
+      :disabled="isLastQuestion"
       text="Next"
       align="right" 
       :icon="iconRight"
@@ -42,9 +43,16 @@ export default {
       const pageNum = this.$route.params.id;
       return pageNum;
     },
-    isDisabled(){
+    isFirstQuestion(){
       const pageNum = this.$route.params.id;
       if (JSON.parse(pageNum) === 1) {
+        return true;
+      }
+      return false;
+    },
+    isLastQuestion(){
+      const pageNum = this.$route.params.id;
+      if(JSON.parse(pageNum) === 7) {
         return true;
       }
       return false;
