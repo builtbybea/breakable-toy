@@ -44,7 +44,7 @@ export default {
     },
     isDisabled(){
       const pageNum = this.$route.params.id;
-      if(pageNum >= 1){
+      if (JSON.parse(pageNum) === 1) {
         return true;
       }
       return false;
