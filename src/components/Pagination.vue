@@ -1,14 +1,13 @@
 <template>
   <div>
     <Button 
-      :disabled="routeId === 1" 
+      :disabled="isDisabled"
       text="Previous" 
       align="left" 
       :icon="iconLeft"
       @click="prevPage"
     />
     <Button
-      :disabled="routeId === this.$route.params.id" 
       text="Next" 
       align="right" 
       :icon="iconRight"
@@ -34,7 +33,6 @@ export default {
       questions,
       iconRight: ArrowRight,
       iconLeft: ArrowLeft,
-      // currentPage: 1,
     };
   },
 
@@ -43,6 +41,13 @@ export default {
     pageCount() {
       const pageNum = this.$route.params.id;
       return pageNum;
+    },
+    isDisabled(){
+      const pageNum = this.$route.params.id;
+      if(pageNum >= 1){
+        return true;
+      }
+      return false;
     },
   },
 
@@ -53,8 +58,6 @@ export default {
       return this.$router.push({ params: routeId  });    
     },
     prevPage() {
-      // if(this.questions.length > 0);
-      // return this.currentPage--;
       const routeId = this.$route.params.id--;
       return this.$router.push({ params: routeId  }); 
     },
