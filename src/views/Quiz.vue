@@ -9,12 +9,14 @@
       name="option"
       @get-selected="selectedAnswer"
     />
+    <Pagination />
   </div>
 </template>
 
 <script>
 import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
+import Pagination from '@/components/Pagination';
 import { questions } from '@/questions.json';
 import { inputType } from '@/mapInputs.js';
 
@@ -23,6 +25,7 @@ export default {
   components: {
     Title,
     CustomInput,
+    Pagination,
   },
 
   data() {
