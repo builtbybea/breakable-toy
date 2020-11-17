@@ -9,7 +9,7 @@
     />
     <Button
       :disabled="isLastQuestion"
-      text="Next"
+      :text="updateText"
       align="right" 
       :icon="iconRight"
       @click="nextPage"
@@ -28,12 +28,16 @@ export default {
   components: {
     Button,
   },
+  props: {
+    text: String,
+  },
 
   data () {
     return {
       questions,
       iconRight: ArrowRight,
       iconLeft: ArrowLeft,
+      nextText: 'Next',
     };
   },
 
@@ -43,19 +47,30 @@ export default {
       const pageNum = this.$route.params.id;
       return pageNum;
     },
+    //Function to return true or false if first question
     isFirstQuestion(){
-      const pageNum = this.$route.params.id;
-      if (JSON.parse(pageNum) === 1) {
+      const objectID = this.$route.params.id;
+      const pageNum = JSON.parse(objectID);
+      if (pageNum === 1) {
         return true;
       }
       return false;
     },
+    //Function to return true or false if last question
     isLastQuestion(){
-      const pageNum = this.$route.params.id;
-      if(JSON.parse(pageNum) === 7) {
+      const objectID = this.$route.params.id;
+      const pageNum = JSON.parse(objectID);
+      if(pageNum === 7) {
         return true;
       }
       return false;
+    },
+    //Function to return text as Finish if last question, else return text as Next
+    updateText(){
+      const objectID = this.$route.params.id;
+      const pageNum = JSON.parse(objectID);
+      const lastQuestionText = this.nextText;
+      return lastQuestionText && pageNum  === 7 ? 'Finish' : 'Next';
     },
   },
 
@@ -70,7 +85,5 @@ export default {
       return this.$router.push({ params: routeId  }); 
     },
   },
-  
 };
 </script>
-
