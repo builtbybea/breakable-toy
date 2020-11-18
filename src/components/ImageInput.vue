@@ -8,10 +8,10 @@
       :type="type" 
       :name="name"
     >
-    <label v-if="type === image-selection" :for="text">
+    <label v-if="type === 'image-selection'" :for="text" :class="['image-input__label', {'image-input__label-radio' :type==='radio'}]">
       {{ text }}
     </label>
-    <CustomInput v-if="type === image-radio" />
+    <CustomInput v-if="type === 'image-radio'" />
   </div>
 </template>
 
@@ -29,6 +29,11 @@ export default {
     name: String,
     image: String,
     alt: String,
+  },
+  data () {
+    return {
+
+    };
   },
 };
 //v-if type === image-selection, show image, paragraph 
