@@ -1,14 +1,28 @@
-<template v-if="{getQuestionType  === 'multi-answer-multi-choice'}">
+<template>
   <div class="quiz">
     <Title :msg="getQuestions.question" :subtitle="getQuestions.subtitle" />
-    <CustomInput
-      v-for="(option, key) in getQuestions.choices"
-      :key="key"
-      :text="option.text"
-      :type="inputType[getQuestions.type]"
-      name="option"
-      @get-selected="selectedAnswer"
-    />
+    <div v-if="getQuestionType === 'image-selection'">
+      <ImageInput 
+        v-for="(option, key) in getQuestions.choices"
+        :key="key"
+        :text="option.text"
+        :type="inputType[getQuestions.type]"
+        name="image"
+        @get-selected="selectedAnswer"
+      />
+    </div>
+
+    <div v-else>
+      <CustomInput
+        v-for="(option, key) in getQuestions.choices"
+        :key="key"
+        :text="option.text"
+        :type="inputType[getQuestions.type]"
+        name="option"
+        @get-selected="selectedAnswer"
+      />
+    </div>
+    
     <Pagination />
   </div>
 </template>
@@ -16,6 +30,7 @@
 <script>
 import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
+import ImageInput from '@/components/ImageInput';
 import Pagination from '@/components/Pagination';
 import { questions } from '@/questions.json';
 import { inputType } from '@/mapInputs.js';
@@ -25,6 +40,7 @@ export default {
   components: {
     Title,
     CustomInput,
+    ImageInput,
     Pagination,
   },
 

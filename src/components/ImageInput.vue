@@ -8,20 +8,20 @@
       :type="type" 
       :name="name"
     >
-    <label v-if="type === 'image-selection'" :for="text" :class="['image-input__label', {'image-input__label-radio' :type==='radio'}]">
+    <label :for="text" :class="['image-input__label', {'image-input__label-radio' :type==='radio'}]">
       {{ text }}
     </label>
-    <CustomInput v-if="type === 'image-radio'" />
+    <!-- <CustomInput /> -->
   </div>
 </template>
 
 <script>
-import CustomInput from '@/components/CustomInput';
+// import CustomInput from '@/components/CustomInput';
 
 export default {
   name: 'image-input',
   components: {
-    CustomInput,
+    // CustomInput,
   },
   props: {
     text: String,
@@ -29,11 +29,6 @@ export default {
     name: String,
     image: String,
     alt: String,
-  },
-  data () {
-    return {
-
-    };
   },
 };
 //v-if type === image-selection, show image, paragraph 

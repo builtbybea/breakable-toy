@@ -98,7 +98,7 @@
         },
         {
             "id": 2,
-            "type": "image-choice",
+            "type": "image-selection",
             "question": "If You Could Only Eat One Food For The Rest Of Your Life, What Would It Be?",
             "choices":[
                 {
