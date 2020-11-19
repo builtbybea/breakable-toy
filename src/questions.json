@@ -233,7 +233,7 @@
         },
         {
             "id": 4,
-            "type":"image-choice",
+            "type":"image-radio",
             "question": "You Stumble Upon A Notebook On The Ground. Do You...?",
             "choices":[
                  {
