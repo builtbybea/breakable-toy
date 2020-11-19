@@ -1,4 +1,4 @@
-<template>
+<template v-if="{getQuestionType  === 'multi-answer-multi-choice'}">
   <div class="quiz">
     <Title :msg="getQuestions.question" :subtitle="getQuestions.subtitle" />
     <CustomInput
@@ -41,6 +41,10 @@ export default {
       // the routeId is 1
       // our array starts at 0
       return questions[routeId - 1];
+    },
+    getQuestionType() {
+      const routeId = this.$route.params.id;
+      return questions[routeId - 1].type;
     },
   },
   methods: {
