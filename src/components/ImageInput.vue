@@ -1,6 +1,6 @@
 <template>
   <div class="image-input">
-    <img :src="image" :alt="alt"> 
+    <img class="image-input--image" :src="image" :alt="text"> 
     <input
       :id="text" 
       :value="text" 

@@ -7,6 +7,7 @@
         :key="key"
         :text="option.text"
         :type="inputType[getQuestions.type]"
+        :image="option.image"
         name="image"
         @get-selected="selectedAnswer"
       />

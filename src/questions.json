@@ -103,6 +103,7 @@
             "choices":[
                 {
                     "text": "Onigiri",
+                    "image": "/images/004-onigiri.svg",
                     "value": "onigiri",
                     "score": {
                         "Sailor Moon": 25,
@@ -114,6 +115,7 @@
                 },
                 {
                     "text": "Gyoza",
+                    "image": "/images/015-dumpling.svg",
                     "value": "gyoza",
                     "score": {
                         "Sailor Moon": 5,
@@ -125,6 +127,7 @@
                 },
                 {
                     "text": "Ramen",
+                    "image": "/images/002-ramen.svg",
                     "value": "ramen",
                     "score": {
                         "Sailor Moon": 0,
@@ -136,6 +139,7 @@
                 },
                 {
                     "text": "Burgers",
+                    "image": "/images/010-burger.svg",
                     "value": "burgers",
                     "score": {
                         "Sailor Moon": 20,
@@ -147,6 +151,7 @@
                 },
                 {
                     "text": "Kare Raisu",
+                    "image": "/images/019-curry.svg",
                     "value": "kare raisu",
                     "score": {
                         "Sailor Moon": 10,
