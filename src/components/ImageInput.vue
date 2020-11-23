@@ -9,7 +9,7 @@
       :name="name"
     >
     <label :for="text" :class="['image-input__label', {'image-input__label-radio' :type==='radio'}]">
-      {{ text }}
+      <h3>{{ text }}</h3>
     </label>
     <!-- <CustomInput /> -->
   </div>
