@@ -1,6 +1,5 @@
 <template>
   <div class="custom-input">
-    <img v-if="image" :class="{'custom-input__image' :image}" :src="image" alt="">
     <input 
       :id="text" 
       :value="text"
@@ -9,6 +8,7 @@
       :name="name"
       @change="selectedAnswer"
     > 
+    <img v-if="image" :class="{'custom-input__image' :image}" :src="image" alt="">
     <label :for="text" :class="['custom-input__label', {'custom-input__label--checkbox' :type === 'checkbox','custom-input__label--radio' :type === 'radio'}]">
       {{ text }}
     </label>
