@@ -19,6 +19,8 @@
         :key="key"
         :text="option.text"
         :type="inputType[getQuestions.type]"
+        :test="option.test"
+        :image="option.image"
         name="option"
         @get-selected="selectedAnswer"
       />

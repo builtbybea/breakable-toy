@@ -1,28 +1,23 @@
 <template>
   <div class="image-input">
-    <img class="image-input--image" :src="image" :alt="text"> 
-    <input
+    <img class="image-input__image" :src="image" :alt="text"> 
+    <input 
       :id="text" 
       :value="text" 
       class="image-input__button" 
       :type="type" 
       :name="name"
     >
-    <label :for="text" :class="['image-input__label', {'image-input__label-radio' :type==='radio'}]">
+    <label :for="text" :class="['image-input__label', {'image-input__label--radio' :type==='radio'}]">
       <h3>{{ text }}</h3>
     </label>
-    <!-- <CustomInput /> -->
   </div>
 </template>
 
 <script>
-// import CustomInput from '@/components/CustomInput';
 
 export default {
   name: 'image-input',
-  components: {
-    // CustomInput,
-  },
   props: {
     text: String,
     type: String,

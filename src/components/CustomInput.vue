@@ -1,5 +1,6 @@
 <template>
   <div class="custom-input">
+    <img v-if="image" :class="{'custom-input__image' :image}" :src="image" alt="">
     <input 
       :id="text" 
       :value="text"
@@ -21,6 +22,7 @@ export default {
     text: String,
     type: String,
     name: String,
+    image: String,
   },
 
   methods: {

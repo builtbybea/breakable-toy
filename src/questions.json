@@ -238,18 +238,20 @@
         },
         {
             "id": 4,
-            "type":"image-radio",
+            "type":"image-choice",
             "question": "You Stumble Upon A Notebook On The Ground. Do You...?",
             "choices":[
                  {
+                    "image": "/images/020-journal.svg",
                      "text": "Take The Notebook 📓",
                      "value": "take the notebook",
                      "score":{
-                         "Light Yagami": 100
+                         "Light Yagami": 300
                      }
                  },
                  {
-                     "text": "Toss The Notebook In The Bin 🗑️",
+                    "image": "/images/043-bin.svg", 
+                    "text": "Toss The Notebook In The Bin 🗑️",
                      "value": "toss the notebook in the bin",
                      "score":{
                         "Sailor Moon": 20,
