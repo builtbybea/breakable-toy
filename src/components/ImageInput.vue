@@ -1,6 +1,6 @@
 <template>
   <div class="image-input">
-    <label :for="text" :class="['image-input__label', {'image-input__label--radio' :type==='radio'}]">
+    <label :class="['image-input__label', {'image-input__label--radio' :type==='radio'}]">
       <input 
         :id="text" 
         :value="text" 
