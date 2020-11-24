@@ -1,7 +1,7 @@
 <template>
   <div class="quiz">
     <Title :msg="getQuestions.question" :subtitle="getQuestions.subtitle" />
-    <div v-if="getQuestionType === 'image-selection'">
+    <div v-if="getQuestionType === 'image-selection'" class="quiz__image-input">
       <ImageInput 
         v-for="(option, key) in getQuestions.choices"
         :key="key"
