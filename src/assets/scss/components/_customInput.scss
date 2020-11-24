@@ -8,6 +8,11 @@
     input[type=radio]:checked ~ .custom-input__label--radio:after{
       opacity: 1;
     }
+    &__image {
+        height: 150px;
+        width: 150px;
+        margin: auto;
+    }
     /*Hide browser's default input buttons*/
     &__button {
         opacity: 0;

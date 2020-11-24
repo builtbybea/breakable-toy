@@ -1,14 +1,31 @@
 <template>
   <div class="quiz">
     <Title :msg="getQuestions.question" :subtitle="getQuestions.subtitle" />
-    <CustomInput
-      v-for="(option, key) in getQuestions.choices"
-      :key="key"
-      :text="option.text"
-      :type="inputType[getQuestions.type]"
-      name="option"
-      @get-selected="selectedAnswer"
-    />
+    <div v-if="getQuestionType === 'image-selection'" class="quiz__image-input">
+      <ImageInput 
+        v-for="(option, key) in getQuestions.choices"
+        :key="key"
+        :text="option.text"
+        :type="inputType[getQuestions.type]"
+        :image="option.image"
+        name="image"
+        @get-selected="selectedAnswer"
+      />
+    </div>
+
+    <div v-else>
+      <CustomInput
+        v-for="(option, key) in getQuestions.choices"
+        :key="key"
+        :text="option.text"
+        :type="inputType[getQuestions.type]"
+        :test="option.test"
+        :image="option.image"
+        name="option"
+        @get-selected="selectedAnswer"
+      />
+    </div>
+    
     <Pagination />
   </div>
 </template>
@@ -16,6 +33,7 @@
 <script>
 import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
+import ImageInput from '@/components/ImageInput';
 import Pagination from '@/components/Pagination';
 import { questions } from '@/questions.json';
 import { inputType } from '@/mapInputs.js';
@@ -25,6 +43,7 @@ export default {
   components: {
     Title,
     CustomInput,
+    ImageInput,
     Pagination,
   },
 
@@ -41,6 +60,10 @@ export default {
       // the routeId is 1
       // our array starts at 0
       return questions[routeId - 1];
+    },
+    getQuestionType() {
+      const routeId = this.$route.params.id;
+      return questions[routeId - 1].type;
     },
   },
   methods: {
