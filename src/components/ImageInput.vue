@@ -1,21 +1,5 @@
 <template>
   <div class="image-input">
-    <!-- <input 
-      :id="text" 
-      :value="text" 
-      class="image-input__button" 
-      :type="type" 
-      :name="name"
-    >
-    <img class="image-input__image" :src="image" :alt="text"> 
-    <label :for="text" :class="['image-input__label', {'image-input__label--radio' :type==='radio'}]">
-      <h3 class="image-input--text">{{ text }}</h3>
-    </label> -->
-
-
-
-   
-    
     <label :for="text" :class="['image-input__label', {'image-input__label--radio' :type==='radio'}]">
       <input 
         :id="text" 
