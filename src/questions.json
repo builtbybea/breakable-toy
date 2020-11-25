@@ -269,25 +269,14 @@
             "question": "How Would You Rate Space?",
             "choices": [
                 {
-                    "text": "Meh",
-                    "value": "meh",
+                    "text": "1",
+                    "value": "1",
                     "score": {
                         "Sailor Moon": 0,
                         "Spike Spiegel": 0,
                         "Goku": 5,
                         "Michiko": 10,
                         "Monkey D. Luffy": 15
-                    }
-                },
-                {
-                    "text": "Love space",
-                    "value": "love space",
-                    "score": {
-                        "Sailor Moon": 20,
-                        "Spike Spiegel": 25,
-                        "Goku": 15,
-                        "Michiko": 0,
-                        "Monkey D. Luffy": 5
                     }
                 }
             ]
