@@ -8,8 +8,9 @@
       :name="name"
       min="0"
       max="100"
+      @change="selectedRange"
     >
-    <label :for="text" class="" />
+    <label :for="text" class="range-input__label" />
   </div>
 </template>
 
@@ -20,6 +21,12 @@ export default {
     text: String,
     type: String,
     name: String,
+  },
+
+  methods: {
+    selectedRange(value) {
+      this.$emit('get-range', value);
+    },
   },
 };
 </script>
