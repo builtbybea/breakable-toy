@@ -4,9 +4,10 @@
     border-radius: 50px;
     padding: 30px;
     &__button {
+        -webkit-appearance: none; //override default CSS style
+        overflow: hidden;
         width: 100%;
         height: 6px;
-        -webkit-appearance: none; //override default CSS style
         background: $accent-range;
         border-radius: 10px;
     }
@@ -14,17 +15,19 @@
     &__button::-webkit-slider-runnable-track {
         -webkit-appearance: none;
         appearance: none;
+        height: 6px;
+        margin-bottom: 30px;
+        border-radius: 10px;
     }
     //emoji slider handle icon
     &__button::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        // background-image: url(/images/smiley-heart-eyes.svg);
-        background-image: url(/images/heart-eye-emoji.svg);
-        background-repeat: no-repeat;
+        // background-image: url(/images/heart-eye-emoji.svg);
+        // background-repeat: no-repeat;
         height: 50px;
         width: 50px;
         cursor: pointer;
-        border: 0;
+        box-shadow: -150vw 0 0 150vw $accent;
     }
 }
