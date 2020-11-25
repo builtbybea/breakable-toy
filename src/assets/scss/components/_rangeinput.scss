@@ -1,0 +1,30 @@
+.range-input { 
+    background: white;
+    width: 50%;
+    border-radius: 50px;
+    padding: 30px;
+    &__button {
+        width: 100%;
+        height: 6px;
+        -webkit-appearance: none; //override default CSS style
+        background: $accent-range;
+        border-radius: 10px;
+    }
+    //slider background
+    &__button::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    //emoji slider handle icon
+    &__button::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        // background-image: url(/images/smiley-heart-eyes.svg);
+        background-image: url(/images/heart-eye-emoji.svg);
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        border: 0;
+    }
+}

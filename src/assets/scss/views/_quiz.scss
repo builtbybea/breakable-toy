@@ -3,4 +3,9 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
+    &__range-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

@@ -12,7 +12,7 @@
         @get-selected="selectedAnswer"
       />
     </div>
-    <div v-else-if="getQuestionType === 'slider-scale'">
+    <div v-else-if="getQuestionType === 'slider-scale'" class="quiz__range-input">
       <RangeInput 
         v-for="(option, key) in getQuestions.choices"
         :key="key"
