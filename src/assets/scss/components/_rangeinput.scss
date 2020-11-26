@@ -1,16 +1,28 @@
 .range-input { 
+    position: relative;
     background: white;
     width: 50%;
     border-radius: 50px;
     padding: 30px;
+    // &--slider {
+    //     position: relative;
+    //     background: $accent;
+    //     width: 100%;
+    //     height: 6px;
+    //     border-radius: 10px;
+    // }
     &__button {
         -webkit-appearance: none; //override default CSS style
         overflow: hidden;
+        // position: absolute;
+        right: -2px;
+        top: -2px;
         width: 100%;
         height: 6px;
         background: $accent-range;
         border-radius: 10px;
     }
+    
     //slider background
     &__button::-webkit-slider-runnable-track {
         -webkit-appearance: none;
@@ -19,15 +31,19 @@
         margin-bottom: 30px;
         border-radius: 10px;
     }
+    
     //emoji slider handle icon
     &__button::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        // background-image: url(/images/heart-eye-emoji.svg);
-        // background-repeat: no-repeat;
+        background: url(/images/heart-eye-emoji.svg);
+        background-repeat: no-repeat;
         height: 50px;
-        width: 50px;
-        cursor: pointer;
-        box-shadow: -150vw 0 0 150vw $accent;
+        width: 41px;
+        cursor: grab;
+        &:active {
+            cursor: grabbing;
+        }  
+        box-shadow: -100vw 0 0 100vw $accent;
     }
 }

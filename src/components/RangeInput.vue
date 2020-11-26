@@ -1,16 +1,18 @@
 <template>
   <div class="range-input"> 
-    <input
-      :id="text"
-      :value="text"
-      class="range-input__button"
-      :type="type"
-      :name="name"
-      min="0"
-      max="100"
-      @change="selectedRange"
-    >
-    <label :for="text" class="range-input__label" />
+    <div class="range-input--slider">
+      <input
+        :id="text"
+        :value="value"
+        class="range-input__button"
+        :type="type"
+        :name="name"
+        min="0"
+        max="100"
+        @change="selectedRange"
+      >
+      <label :for="text" class="range-input__label" />
+    </div>
   </div>
 </template>
 
@@ -21,6 +23,11 @@ export default {
     text: String,
     type: String,
     name: String,
+  },
+  data(){
+    return {
+      value: 50,
+    };
   },
 
   methods: {
