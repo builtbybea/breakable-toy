@@ -13,22 +13,13 @@
     // }
     &__button {
         -webkit-appearance: none; //override default CSS style
-        overflow: hidden;
-        // position: absolute;
+        // overflow: hidden;
+        position: relative;
         right: -2px;
         top: -2px;
         width: 100%;
         height: 6px;
         background: $accent-range;
-        border-radius: 10px;
-    }
-    
-    //slider background
-    &__button::-webkit-slider-runnable-track {
-        -webkit-appearance: none;
-        appearance: none;
-        height: 6px;
-        margin-bottom: 30px;
         border-radius: 10px;
     }
     
@@ -44,6 +35,5 @@
         &:active {
             cursor: grabbing;
         }  
-        box-shadow: -100vw 0 0 100vw $accent;
     }
 }

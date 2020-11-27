@@ -3,7 +3,7 @@
     <div class="range-input--slider">
       <input
         :id="text"
-        :value="value"
+        v-model="value"
         class="range-input__button"
         :type="type"
         :name="name"
@@ -12,6 +12,7 @@
         @change="selectedRange"
       >
       <label :for="text" class="range-input__label" />
+      <span> {{ value }} </span>
     </div>
   </div>
 </template>
@@ -26,11 +27,13 @@ export default {
   },
   data(){
     return {
-      value: 50,
+      value: 0,
     };
   },
-
   methods: {
+    increment() {
+      this.value++; 
+    },
     selectedRange(value) {
       this.$emit('get-range', value);
     },
