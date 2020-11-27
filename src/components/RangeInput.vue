@@ -1,6 +1,6 @@
 <template>
   <div class="range-input"> 
-    <div class="range-input--slider">
+    <div class="range-input--slider" :style="testerStyle">
       <input
         :id="text"
         v-model="value"
@@ -28,12 +28,23 @@ export default {
   data(){
     return {
       value: 0,
+      testerStyle: {
+        background: 'red',
+        height: '6px',
+        borderRadius: '10px',
+      },
     };
   },
-  methods: {
+  computed: {
     increment() {
-      this.value++; 
-    },
+      let count = this.value;
+      return count++;
+    }, 
+  },
+  methods: {
+    // increment() {
+    //   this.value++; 
+    // },
     selectedRange(value) {
       this.$emit('get-range', value);
     },
