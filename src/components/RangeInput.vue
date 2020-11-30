@@ -1,6 +1,6 @@
 <template>
   <div class="range-input"> 
-    <div class="range-input--slider" :style="testerStyle">
+    <div class="range-input__wrapper">
       <input
         :id="text"
         v-model="value"
@@ -12,7 +12,10 @@
         @change="selectedRange"
       >
       <label :for="text" class="range-input__label" />
-      <span> {{ value }} </span>
+      <div class="range-input__slider">
+        <span> {{ getRating }} </span>
+        <span> {{ value }} </span>
+      </div>
     </div>
   </div>
 </template>
@@ -28,11 +31,11 @@ export default {
   data(){
     return {
       value: 0,
-      testerStyle: {
-        background: 'red',
-        height: '6px',
-        borderRadius: '10px',
-      },
+      // testerStyle: {
+      //   background: 'red',
+      //   height: '6px',
+      //   borderRadius: '10px',
+      // },
     };
   },
   computed: {
@@ -40,11 +43,12 @@ export default {
       let count = this.value;
       return count++;
     }, 
+    getRating(){
+      const ratings = ['💩','🙁','😐','🙂','😊','😍'];
+      return ratings[(Math.floor(this.value/20))];
+    },
   },
   methods: {
-    // increment() {
-    //   this.value++; 
-    // },
     selectedRange(value) {
       this.$emit('get-range', value);
     },

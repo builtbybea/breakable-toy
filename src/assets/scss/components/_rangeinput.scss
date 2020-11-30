@@ -1,39 +1,25 @@
-.range-input { 
-    position: relative;
-    background: white;
-    width: 50%;
-    border-radius: 50px;
-    padding: 30px;
-    // &--slider {
-    //     position: relative;
-    //     background: $accent;
-    //     width: 100%;
-    //     height: 6px;
-    //     border-radius: 10px;
-    // }
-    &__button {
-        -webkit-appearance: none; //override default CSS style
-        // overflow: hidden;
-        // position: relative;
-        right: -2px;
-        top: -2px;
-        width: 100%;
-        height: 6px;
-        background: $accent-range;
-        border-radius: 10px;
+.range-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    &__wrapper {
+        background: $white;
+        width: 50%;
+        padding: 15px 40px;
+        border-radius: 50px;
     }
-    
-    //emoji slider handle icon
-    &__button::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        background: url(/images/heart-eye-emoji.svg);
-        background-repeat: no-repeat;
-        height: 50px;
-        width: 41px;
-        cursor: grab;
-        &:active {
-            cursor: grabbing;
-        }  
+    &__button {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        opacity: 0;
+    }
+    &__slider {
+        position: absolute;
+        background-color: $accent-range;
+        width: 50%;
+        border-radius: 10px;
+        margin-top: -24px;
     }
 }
