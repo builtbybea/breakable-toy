@@ -13,7 +13,7 @@
       >
       <label :for="text" class="range-input__label" />
       <div class="range-input__slider">
-        <span> {{ getRating }} </span>
+        <span class="range-input__emoji-thumb"> {{ getRating }} </span>
         <span> {{ value }} </span>
       </div>
     </div>
