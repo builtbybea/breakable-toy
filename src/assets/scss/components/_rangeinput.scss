@@ -12,31 +12,34 @@
         padding: 15px 40px;
         border-radius: 50px;
     }
+    &__label {
+        position: relative;
+        display: flex;
+        width: 100%;
+        background: $accent-range;
+        height: 6px;
+        border-radius: 10px;
+        z-index: 2;
+    }
     &__button {
         position: relative;
         z-index: 1;
         width: 100%;
-        opacity: 0;
-        margin-top: 2px;
-       
+        opacity: 0;    
     }
-    // &__label {
-    //     min-width: 100%;
-    //     height: 15px;
-    //     background: red;
-    //     border-radius: inherit;
-    // }
     &__slider {
         position: absolute;
         display: flex;
         justify-content: left;
         align-items: center;
-        // background-color: $accent-range;
-        width: 100%;
+        background-color: $accent;
+        width: 0;
         height: 6px;
         border-radius: 15px;
     }
     &__emoji-thumb {
+        position: absolute;
+        left: 0;
         display: flex;
         justify-content: left;
         margin-top: -7px;
