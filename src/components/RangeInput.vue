@@ -12,7 +12,6 @@
           max="100"
           @change="selectedRange"
         >
-        <!-- <label :for="text" class="range-input__label" :style="getSliderBackground" /> -->
         <div class="range-input__slider" :style="{width: value + '%'}">
           <span class="range-input__emoji-thumb" :style="{left: value + '%'}"> {{ getRating }} </span>
           <span> {{ value }} </span>
