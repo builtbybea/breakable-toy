@@ -40,8 +40,6 @@
     &__emoji-thumb {
         position: absolute;
         left: 0;
-        display: flex;
-        justify-content: left;
-        margin-top: -7px;
+        padding-bottom: 7px;
     }
 }
