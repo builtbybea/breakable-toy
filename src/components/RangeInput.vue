@@ -13,7 +13,6 @@
           @change="selectedRange"
         >
         <span class="range-input__emoji-thumb" :style="{left: value + '%'}"> {{ getRating }} </span>
-        <!-- <span> {{ value }} </span> -->
         <div class="range-input__slider" :style="{width: (value) + '%'}" />
       </label>
     </div>
