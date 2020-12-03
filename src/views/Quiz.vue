@@ -12,7 +12,17 @@
         @get-selected="selectedAnswer"
       />
     </div>
-
+    <div v-else-if="getQuestionType === 'slider-scale'" class="quiz__range-input">
+      <RangeInput 
+        v-for="(option, key) in getQuestions.choices"
+        :key="key"
+        :text="option.text"
+        :type="inputType[getQuestions.type]"
+        :image="option.image"
+        name="image"
+        @get-range="selectedRange"
+      />
+    </div>
     <div v-else>
       <CustomInput
         v-for="(option, key) in getQuestions.choices"
@@ -34,6 +44,7 @@
 import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
 import ImageInput from '@/components/ImageInput';
+import RangeInput from '@/components/RangeInput';
 import Pagination from '@/components/Pagination';
 import { questions } from '@/questions.json';
 import { inputType } from '@/mapInputs.js';
@@ -44,6 +55,7 @@ export default {
     Title,
     CustomInput,
     ImageInput,
+    RangeInput,
     Pagination,
   },
 
