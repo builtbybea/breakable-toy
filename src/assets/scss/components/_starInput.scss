@@ -4,6 +4,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        &:hover {
+            svg {
+                fill: $accent;
+                transition: ease-in-out .8s;
+            }
+            h3 {
+                color: $white;
+                transition: ease-in-out .2s;
+            }
+        }
     }
     &__button {
         opacity: 0;
@@ -14,10 +24,6 @@
         width: 100px;
         margin: 10px;
         padding: 10px;
-        &:hover {
-            fill: $accent;
-            transition: ease-in .5s;
-        }
     }
     &__star-number {
         font-size: $font-size-small;
