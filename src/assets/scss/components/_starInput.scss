@@ -1,0 +1,29 @@
+.star-input {
+    &__label {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__button {
+        opacity: 0;
+    }
+    &__svg-star{
+        fill: $white;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+        &:hover {
+            fill: $accent;
+            transition: ease-in .5s;
+        }
+    }
+    &__star-number {
+        font-size: $font-size-small;
+        font-family: $h3-font;
+        position: absolute;
+        top: 40px;
+        right: 65px;
+    }
+}
