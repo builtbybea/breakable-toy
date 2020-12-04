@@ -1,13 +1,42 @@
 <template>
-  <div>
-    <label for="">
-      <input>
+  <div class="star-input">
+    <label :for="text" class="star-input__label">
+      <input 
+        :id="text" 
+        class="star-input_button"
+        :type="type"
+        :name="name"
+        @change="selectedRating"
+      >
+      <!-- <span class="star-input--icon">★</span> -->
+      <svg 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 19.481 19.481" 
+        xmlns:xlink="http://www.w3.org/1999/xlink" 
+        enable-background="new 0 0 19.481 19.481"
+        class="star_input--star-svg"
+      >
+        <g>
+          <path d="m10.201,.758l2.478,5.865 6.344,.545c0.44,0.038 0.619,0.587 0.285,0.876l-4.812,4.169 1.442,6.202c0.1,0.431-0.367,0.77-0.745,0.541l-5.452-3.288-5.452,3.288c-0.379,0.228-0.845-0.111-0.745-0.541l1.442-6.202-4.813-4.17c-0.334-0.289-0.156-0.838 0.285-0.876l6.344-.545 2.478-5.864c0.172-0.408 0.749-0.408 0.921,0z"/>
+        </g>
+      </svg>
     </label>
   </div>
 </template>
 
 <script>
 export default {
-
+  name: 'star-input',
+  props: {
+    text: String,
+    type: String,
+    name: String,
+  },
+  methods: {
+    selectedRating(value){
+      this.$emit('get-rating', value);
+    },
+  },
 };
 </script>
