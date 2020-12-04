@@ -23,6 +23,16 @@
         @get-range="selectedRange"
       />
     </div>
+    <div v-else-if="getQuestionType === 'star-rating'" class="quiz__star-input">
+      <StarInput 
+        v-for="(option, key) in getQuestions.choices"
+        :key="key" 
+        :text="option.text"
+        :type="inputType[getQuestions.type]"
+        name="star"
+        @get-star="selectedRating"  
+      />
+    </div>
     <div v-else>
       <CustomInput
         v-for="(option, key) in getQuestions.choices"
@@ -45,6 +55,7 @@ import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
 import ImageInput from '@/components/ImageInput';
 import RangeInput from '@/components/RangeInput';
+import StarInput from '@/components/StarInput';
 import Pagination from '@/components/Pagination';
 import { questions } from '@/questions.json';
 import { inputType } from '@/mapInputs.js';
@@ -56,6 +67,7 @@ export default {
     CustomInput,
     ImageInput,
     RangeInput,
+    StarInput,
     Pagination,
   },
 
