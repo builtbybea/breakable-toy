@@ -30,7 +30,7 @@
         :text="option.text"
         :type="inputType[getQuestions.type]"
         name="star"
-        @get-star="selectedRating"  
+        @get-rating="selectedRating"  
       />
     </div>
     <div v-else>
@@ -92,6 +92,9 @@ export default {
   },
   methods: {
     selectedAnswer(value) {
+      console.log(value);
+    },
+    selectedRating(value) {
       console.log(value);
     },
   },

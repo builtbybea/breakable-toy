@@ -4,19 +4,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         &:hover {
             svg {
                 fill: $accent;
-                transition: ease-in-out .8s;
+                transition: ease-in-out .5s;
             }
-            h3 {
+            span {
                 color: $white;
-                transition: ease-in-out .2s;
+                transition: ease-in-out .5s;
             }
         }
     }
     &__button {
         opacity: 0;
+        &:checked ~ svg {
+            fill: $accent;
+        }
+        &:checked ~ span {
+            color: $white;
+        }
     }
     &__svg-star{
         fill: $white;
@@ -28,8 +35,9 @@
     &__star-number {
         font-size: $font-size-small;
         font-family: $h3-font;
+        font-weight: bold;
         position: absolute;
-        top: 40px;
+        top: 60px;
         right: 65px;
     }
 }
