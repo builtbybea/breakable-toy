@@ -24,13 +24,20 @@
       />
     </div>
     <div v-else-if="getQuestionType === 'star-rating'" class="quiz__star-input">
+      <pre>{{ rating }}</pre>
       <StarInput 
-        v-for="(option, key) in getQuestions.choices"
-        :key="key" 
-        :text="option.text"
+        v-for="(option, index) in getQuestions.choices"
+        :key="index" 
+        :text="index"
         :type="inputType[getQuestions.type]"
         name="star"
-        @get-rating="selectedRating"  
+        :active="rating >= index"
+        :hover="hoveredRating >= index"
+        @rated="setRating($event, index)" 
+        @focus="hoveredStar($event, index)"
+        @mouseover="hoveredStar($event, index)"
+        @blur="unhoveredStar($event)"
+        @mouseleave="unhoveredStar($event)"
       />
     </div>
     <div v-else>
@@ -74,6 +81,9 @@ export default {
   data() {
     return {
       inputType,
+      test: false,
+      rating: -1,
+      hoveredRating: -1,
     };
   },
 
@@ -94,8 +104,15 @@ export default {
     selectedAnswer(value) {
       console.log(value);
     },
-    selectedRating(value) {
-      console.log(value);
+    setRating(event, index) {
+      console.log(event, index);
+      this.rating = index;
+    },
+    hoveredStar(event, index){
+      this.hoveredRating = index;
+    },
+    unhoveredStar(event) {
+      this.hoveredRating = event;
     },
   },
 };

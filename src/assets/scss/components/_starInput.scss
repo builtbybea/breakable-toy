@@ -1,11 +1,22 @@
 .star-input {
+    &--active {
+        svg {
+            fill: $accent;
+        }
+        span {
+            color: $white;
+        }
+    }
+    &--hover {
+        transform: scale(1.25);
+    }
     &__label {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        &:hover {
+        &:focus {
             svg {
                 fill: $accent;
                 transition: ease-in-out .5s;
@@ -41,3 +52,4 @@
         right: 65px;
     }
 }
+
