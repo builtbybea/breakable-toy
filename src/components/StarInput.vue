@@ -4,7 +4,7 @@
       'star-input', 
       {
         'star-input--active': active,
-        'star-input--hover': hover,
+        'star-input--highlighted': highlighted,
       },
     ]"
   >
@@ -16,11 +16,11 @@
         :type="type"
         :name="name"
         @change="selectedRating"
-        @focus="hover === true"
-        @mouseover="hover === true"
-        @blur="hover === false"
-        @mouseleave="hover === false"
-      >
+        @mouseover="highlightedRating"
+        @focus="highlightedRating"
+        @blur="unhighlightedRating"
+        @mouseleave="unhighlightedRating" 
+      > 
       <svg 
         version="1.1" 
         xmlns="http://www.w3.org/2000/svg" 
@@ -46,19 +46,19 @@ export default {
     type: String,
     name: String,
     active: Boolean,
-    hover: Boolean,
+    highlighted: Boolean,
   },
   methods: {
     selectedRating(event){
       // console.log(event.target.checked);
       this.$emit('rated', event);
     },
-    mouseOver(){
-      //console.log(event.target.onmouseOver);
-      this.$emit('mouse-over', event);
+    highlightedRating(){
+      // console.log('highlighted');
+      this.$emit('highlighted', event);
     },
-    mouseLeave() {
-      this.$emit('mouse-leave', event);
+    unhighlightedRating() {
+      this.$emit('unhighlighted', event);
     },
   },
 };
