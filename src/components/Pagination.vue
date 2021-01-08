@@ -51,7 +51,7 @@ export default {
     isFirstQuestion(){
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
-      if (pageNum === 1) {
+      if (pageNum === 0) {
         return true;
       }
       return false;
@@ -82,7 +82,7 @@ export default {
       const pageNum = JSON.parse(objectId);
       
       if (pageNum === 8) {
-        return this.$router.params = this.$router.replace('/results');
+        return this.$router.push('/results');
 
       }
       console.log(routeId);
@@ -91,6 +91,11 @@ export default {
     },
     prevPage() {
       const routeId = this.$route.params.id--;
+      const objectId = this.$route.params.id;
+      const pageNum = JSON.parse(objectId);
+      if (pageNum === 0) {
+        return this.$router.push('/');
+      }
       return this.$router.push({ params: routeId  }); 
     },
   },
