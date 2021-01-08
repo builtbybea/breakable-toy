@@ -60,7 +60,7 @@ export default {
     isLastQuestion(){
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
-      if(pageNum === 7) {
+      if(pageNum === 8) {
         return true;
       }
       return false;
@@ -81,8 +81,8 @@ export default {
       const objectId = this.$route.params.id;
       const pageNum = JSON.parse(objectId);
       
-      if(pageNum === 7) {
-        return this.$router.push('/results');
+      if (pageNum === 8) {
+        return this.$router.params = this.$router.replace('/results');
 
       }
       console.log(routeId);
