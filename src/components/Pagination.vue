@@ -78,7 +78,16 @@ export default {
   methods: {
     nextPage() {
       const routeId = this.$route.params.id++;
-      return this.$router.push({ params: routeId  });    
+      const objectId = this.$route.params.id;
+      const pageNum = JSON.parse(objectId);
+      
+      if(pageNum === 7) {
+        return this.$router.push('/results');
+
+      }
+      console.log(routeId);
+      return this.$router.push({ params: routeId  });  
+        
     },
     prevPage() {
       const routeId = this.$route.params.id--;
