@@ -53,11 +53,11 @@ export default {
       // console.log(event.target.checked);
       this.$emit('rated', event);
     },
-    highlightedRating(){
+    highlightedRating(event){
       // console.log('highlighted');
       this.$emit('highlighted', event);
     },
-    unhighlightedRating() {
+    unhighlightedRating(event) {
       this.$emit('unhighlighted', event);
     },
   },
