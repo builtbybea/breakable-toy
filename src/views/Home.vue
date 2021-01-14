@@ -6,7 +6,7 @@
     </div>
     <div class="home__content">
       <Title class="home__header" msg="Which Anime Character Are You?" />
-      <Button class="home__button" text="Start Quiz" @click="firstPage" />
+      <Button class="home__button" text="Start Quiz" @click="goToFirstPage" />
     </div>
   </div>
 </template>
