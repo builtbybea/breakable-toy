@@ -43,7 +43,6 @@
         :key="key"
         :text="option.text"
         :type="inputType[getQuestions.type]"
-        :test="option.test"
         :image="option.image"
         name="option"
         @get-selected="selectedAnswer"
@@ -78,7 +77,6 @@ export default {
   data() {
     return {
       inputType,
-      test: false,
       rating: -1,
       highlightedRating: -1,
     };
