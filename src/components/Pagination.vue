@@ -60,7 +60,7 @@ export default {
     isLastQuestion(){
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
-      if(pageNum === 8) {
+      if(pageNum > this.questions.length) {
         return true;
       }
       return false;
@@ -70,7 +70,7 @@ export default {
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
       const lastQuestionText = this.nextText;
-      return lastQuestionText && pageNum  === 7 ? 'Finish' : 'Next';
+      return lastQuestionText && pageNum  === this.questions.length ? 'Finish' : 'Next';
     },
   },
 
@@ -78,16 +78,12 @@ export default {
   methods: {
     nextPage() {
       const routeId = this.$route.params.id++;
-      const objectId = this.$route.params.id;
-      const pageNum = JSON.parse(objectId);
-      
-      if (pageNum === 8) {
+      // Unary Operator By adding a + sign before a String, it will be converted into a number if it follows the right format.
+      // https://stackabuse.com/javascript-convert-string-to-number/
+      if (+this.$route.params.id > this.questions.length) {
         return this.$router.push('/results');
-
       }
-      console.log(routeId);
-      return this.$router.push({ params: routeId  });  
-        
+      return this.$router.push({ params: routeId  });   
     },
     prevPage() {
       const routeId = this.$route.params.id--;
