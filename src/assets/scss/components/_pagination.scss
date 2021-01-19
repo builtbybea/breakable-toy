@@ -1,6 +1,13 @@
 .pagination {
     display: flex;
+    justify-content: space-evenly;
+    
+}
+
+@include min-width(bp(s)) {
+.pagination {
     justify-content: space-between;
     margin: 0 1.5rem;
     padding: 2rem;
+}
 }
