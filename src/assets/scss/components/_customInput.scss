@@ -1,3 +1,8 @@
+@include max-width(bp(s)) {
+   .custom-input {
+       display: grid;
+   }
+}
 .custom-input {
     display: inline-grid;
     margin: 2.5px;
