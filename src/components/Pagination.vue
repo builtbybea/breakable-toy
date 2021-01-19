@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pagination">
     <Button 
       :disabled="isFirstQuestion"
       text="Previous"
