@@ -6,7 +6,7 @@
     </div>
     <div class="home__content">
       <Title class="home__header" msg="Which Anime Character Are You?" />
-      <Button class="home__button" text="Start Quiz" />
+      <Button class="home__button" text="Start Quiz" @click="goToFirstPage" />
     </div>
   </div>
 </template>
@@ -21,6 +21,11 @@ export default {
   components: {
     Title,
     Button,
+  },
+  methods: {
+    goToFirstPage(){
+      return this.$router.push('/quiz/1');
+    },
   },
 };
 </script>

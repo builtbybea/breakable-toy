@@ -23,13 +23,26 @@
         @get-range="selectedRange"
       />
     </div>
+    <div v-else-if="getQuestionType === 'star-rating'" class="quiz__star-input">
+      <StarInput 
+        v-for="(option, index) in getQuestions.choices"
+        :key="index" 
+        :text="index"
+        :type="inputType[getQuestions.type]"
+        name="star"
+        :active="rating >= index"
+        :highlighted="highlightedRating >= index"
+        @rated="setRating($event, index)" 
+        @highlighted="setHighlighted($event, index)"
+        @unhighlighted="unsetHighlighted($event, index)"
+      />
+    </div>
     <div v-else>
       <CustomInput
         v-for="(option, key) in getQuestions.choices"
         :key="key"
         :text="option.text"
         :type="inputType[getQuestions.type]"
-        :test="option.test"
         :image="option.image"
         name="option"
         @get-selected="selectedAnswer"
@@ -45,6 +58,7 @@ import Title from '@/components/Title';
 import CustomInput from '@/components/CustomInput';
 import ImageInput from '@/components/ImageInput';
 import RangeInput from '@/components/RangeInput';
+import StarInput from '@/components/StarInput';
 import Pagination from '@/components/Pagination';
 import { questions } from '@/questions.json';
 import { inputType } from '@/mapInputs.js';
@@ -56,12 +70,15 @@ export default {
     CustomInput,
     ImageInput,
     RangeInput,
+    StarInput,
     Pagination,
   },
 
   data() {
     return {
       inputType,
+      rating: -1,
+      highlightedRating: -1,
     };
   },
 
@@ -81,6 +98,15 @@ export default {
   methods: {
     selectedAnswer(value) {
       console.log(value);
+    },
+    setRating(event, index) {
+      this.rating = index;
+    },
+    setHighlighted(event, index){
+      this.highlightedRating = index;
+    },
+    unsetHighlighted() {
+      this.highlightedRating = -1;
     },
   },
 };
