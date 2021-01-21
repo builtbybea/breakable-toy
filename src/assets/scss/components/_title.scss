@@ -1,0 +1,8 @@
+h1 {
+    margin: 0;
+}
+@include max-width(bp(s)) {
+    h1 {
+        font-size: 3em;
+    }
+}
