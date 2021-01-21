@@ -28,3 +28,9 @@
         }
     }
 }
+
+@include max-width(bp(xs)) {
+    .home {
+        padding-top: 2rem;
+    }
+}
