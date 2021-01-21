@@ -36,6 +36,9 @@ export default {
 }
 
 #nav {
+  position: fixed;
+  top: auto;
+  right: -1000px;
   padding: 30px;
 
   a {
