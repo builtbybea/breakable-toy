@@ -1,6 +1,7 @@
 .home {
         display: grid;
         grid-template-columns: 1fr 2fr;
+        padding-top: 5rem;
         &__content {
             display: flex;
             align-items: center;
