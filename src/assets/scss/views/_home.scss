@@ -1,8 +1,6 @@
-@include min-width(bp(s)) {
-    .home {
+.home {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        padding-top: 80px;
         &__content {
             display: flex;
             align-items: center;
@@ -17,12 +15,11 @@
             float: right;
         }
     }
-};
 
 @include max-width(bp(s)) {
     .home {
         &--image1, &--image2 {
-            height: 200px;
+            height: 250px;
         }
         &__button {
             margin-bottom: 2em;
@@ -30,8 +27,18 @@
     }
 }
 
-@include max-width(bp(xs)) {
+@media only screen and (max-width: 500px) {
     .home {
-        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__images {
+            display: flex;
+            flex-direction: column;
+        }
+         &--image1, &--image2 {
+            height: 200px;
+        }
     }
 }
