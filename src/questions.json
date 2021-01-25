@@ -213,13 +213,13 @@
                     }
                 },
                 {
-                    "text": "Lottery?! One Piece Is The Ulitmate Prize",
-                    "value": "lottery?! one piece is the ultimate prize",
+                    "text": "One Piece",
+                    "value": "one piece",
                     "score":{
-                        "Sailor Moon": 10,
-                        "Spike Spiegel": 5,
-                        "Goku": 25,
-                        "Michiko": 15,
+                        "Sailor Moon": 0,
+                        "Spike Spiegel": 0,
+                        "Goku": 0,
+                        "Michiko": 0,
                         "Monkey D. Luffy": 25
                     }
                 },
@@ -251,8 +251,8 @@
                  },
                  {
                     "image": "/images/043-bin.svg", 
-                    "text": "Toss The Notebook In The Bin 🗑️",
-                     "value": "toss the notebook in the bin",
+                    "text": "Toss It In The Bin 🗑️",
+                     "value": "toss the in the bin",
                      "score":{
                         "Sailor Moon": 20,
                         "Spike Spiegel": 10,
@@ -392,8 +392,8 @@
                     }
                 },
                 {
-                    "text": "Carefree, Happy-Go-Lucky",
-                    "value": "carefree, happy-go-lucky",
+                    "text": "Happy-Go-Lucky",
+                    "value": "happy-go-lucky",
                     "score": {
                         "Sailor Moon": 5,
                         "Spike Spiegel": 20,
