@@ -2,6 +2,7 @@
     .home {
         display: grid;
         grid-template-columns: 1fr 2fr;
+        padding-top: 80px;
         &__content {
             display: flex;
             align-items: center;
