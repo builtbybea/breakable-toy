@@ -1,34 +1,41 @@
 <template>
   <div class="quiz">
-    <Title :msg="getQuestions.question" :subtitle="getQuestions.subtitle" />
-    <div v-if="getQuestionType === 'image-selection'" class="quiz__image-input">
+    <Title :msg="currentQuestion.question" :subtitle="currentQuestion.subtitle" />
+    <pre>Value: {{ value }}</pre>
+    <button @click="handleSaveAnswer()">
+      Store Answer
+    </button>
+    <pre>{{ currentQuestionType }}</pre>
+    <pre> {{ inputType }}</pre>
+    <div v-if="currentQuestionType === 'image-selection'" class="quiz__image-input">
       <ImageInput 
-        v-for="(option, key) in getQuestions.choices"
+        v-for="(option, key) in currentQuestion.choices"
         :key="key"
         :text="option.text"
-        :type="inputType[getQuestions.type]"
+        :value="option.value"
+        :type="inputType"
         :image="option.image"
         name="image"
         @get-selected="selectedAnswer"
       />
     </div>
-    <div v-else-if="getQuestionType === 'slider-scale'" class="quiz__range-input">
+    <div v-else-if="currentQuestionType === 'slider-scale'" class="quiz__range-input">
       <RangeInput 
-        v-for="(option, key) in getQuestions.choices"
+        v-for="(option, key) in currentQuestion.choices"
         :key="key"
         :text="option.text"
-        :type="inputType[getQuestions.type]"
+        :type="inputType"
         :image="option.image"
         name="image"
         @get-range="selectedRange"
       />
     </div>
-    <div v-else-if="getQuestionType === 'star-rating'" class="quiz__star-input">
+    <div v-else-if="currentQuestionType === 'star-rating'" class="quiz__star-input">
       <StarInput 
-        v-for="(option, index) in getQuestions.choices"
+        v-for="(option, index) in currentQuestion.choices"
         :key="index" 
         :text="index"
-        :type="inputType[getQuestions.type]"
+        :type="inputType"
         name="star"
         :active="rating >= index"
         :highlighted="highlightedRating >= index"
@@ -39,17 +46,17 @@
     </div>
     <div v-else>
       <CustomInput
-        v-for="(option, key) in getQuestions.choices"
+        v-for="(option, key) in currentQuestion.choices"
         :key="key"
         :text="option.text"
-        :type="inputType[getQuestions.type]"
+        :type="inputType"
         :image="option.image"
         name="option"
         @get-selected="selectedAnswer"
       />
     </div>
     
-    <Pagination />
+    <Pagination @change-page="handleSaveAnswer" />
   </div>
 </template>
 
@@ -61,7 +68,8 @@ import RangeInput from '@/components/RangeInput';
 import StarInput from '@/components/StarInput';
 import Pagination from '@/components/Pagination';
 import { questions } from '@/questions.json';
-import { inputType } from '@/mapInputs.js';
+import { INPUT_TYPES_MAP } from '@/mapInputs.js';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'quiz-page',
@@ -76,37 +84,87 @@ export default {
 
   data() {
     return {
-      inputType,
       rating: -1,
       highlightedRating: -1,
+      value: null,
     };
   },
 
   computed: {
-    getQuestions() {
-      const routeId = this.$route.params.id;
+    currentQuestionId() {
+      return this.$route.params.id;
+    },
+    currentQuestion() {
       // Routes each Question to a new page and add question id to each of url
       // the routeId is 1
       // our array starts at 0
-      return questions[routeId - 1];
+      return questions[this.currentQuestionId - 1];
     },
-    getQuestionType() {
-      const routeId = this.$route.params.id;
-      return questions[routeId - 1].type;
+    currentQuestionType() {
+      // const routeId = this.$route.params.id;
+      // return questions[routeId - 1].type;
+      return this.currentQuestion.type;
+    },
+    inputType() {
+      return INPUT_TYPES_MAP[this.currentQuestionType];
+    },
+  },
+  watch: {
+    //can use the below if above methods do not exist
+    // '$route.params.id'(){
+    //   console.log('route changed');
+    //   this.value = null;
+    // },
+    currentQuestionId(newRouteId){
+      console.log('watchedQuestionId', newRouteId);
+      this.value = null;
+      this.saveAnswer({
+        key: newRouteId,
+        value: null,
+      });
     },
   },
   methods: {
-    selectedAnswer(value) {
-      console.log(value);
+    ...mapActions('quiz', [
+      'saveAnswer',
+    ]),
+    selectedAnswer(event) {
+      console.log('selectedAnswer', event.target.value);
+      this.value = event.target.value;
+    },
+    selectedRange(event) {
+      // console.log(event.target.value);
+      this.value = event.target.value;
     },
     setRating(event, index) {
+      console.log(index);
       this.rating = index;
+      this.value = index + 1;
     },
     setHighlighted(event, index){
       this.highlightedRating = index;
     },
     unsetHighlighted() {
       this.highlightedRating = -1;
+    },
+    handleSaveAnswer(newRoute) {
+      if(this.value === null) {
+        console.log('handleSaveAnswer', this.value);
+        return;
+      }
+      const userAnswerObject = {
+        key: this.currentQuestionId,
+        value: this.value,
+      };
+      // if(this.value !== null) {
+      //   console.log('disabled', this.value);
+      //   this.saveAnswer(userAnswerObject);
+      //   this.$router.push(newRoute);
+      // }
+      this.saveAnswer(userAnswerObject);
+      this.$router.push(newRoute);
+      // console.log('saveAnswer', newRoute);
+      // console.log('saveAnswer', this.currentQuestionId, this.value);
     },
   },
 };

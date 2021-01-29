@@ -1,4 +1,4 @@
-export const inputType = {
+export const INPUT_TYPES_MAP = {
   'multi-answer-multi-choice': 'checkbox',
   'image-selection': 'radio',
   'single-answer-multi-choice': 'radio',

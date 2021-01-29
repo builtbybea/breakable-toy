@@ -7,6 +7,7 @@
 
 <script>
 import Title from '@/components/Title';
+import { mapGetters } from 'vuex';
 export default {
   name:'results-page',
   components: {
@@ -14,16 +15,13 @@ export default {
   },
   data() {
     return {
-      totalScore: {
-        'Sailor Moon': 5,
-        'Spike Spiegel': 0,
-        'Goku': 10,
-        'Michiko': 5,
-        'Monkey D. Luffy': 20,
-      },
+
     };
   },
   computed: {
+    ...mapGetters('quiz', [
+      'totalScore',
+    ]),
     // reference for .reduce() answer https://stackoverflow.com/questions/27376295/getting-key-with-the-highest-value-from-object
     // characterNameLoop() {
     //   const testArray = ['Helen', 'Florence', 'Perpetua'];

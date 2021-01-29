@@ -8,12 +8,13 @@
       @click="prevPage"
     />
     <Button
-      :disabled="isLastQuestion"
+      :disabled="isAnswerSelected"
       :text="updateText"
       align="right" 
       :icon="iconRight"
       @click="nextPage"
     />
+    <pre>{{ value }}</pre>
   </div>
 </template>
 
@@ -30,6 +31,7 @@ export default {
   },
   props: {
     text: String,
+    value: Boolean,
   },
 
   data () {
@@ -51,20 +53,27 @@ export default {
     isFirstQuestion(){
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
-      if (pageNum === 0) {
+      if (pageNum === 1) {
+        return true;
+      }
+      return false;
+    },
+    isAnswerSelected(){
+      console.log('isAnswerSelected', this.value);
+      if(this.value !== null) {
         return true;
       }
       return false;
     },
     //Function to return true or false if last question
-    isLastQuestion(){
-      const objectID = this.$route.params.id;
-      const pageNum = JSON.parse(objectID);
-      if(pageNum > this.questions.length) {
-        return true;
-      }
-      return false;
-    },
+    // isLastQuestion(){
+    //   const objectID = this.$route.params.id;
+    //   const pageNum = JSON.parse(objectID);
+    //   if(pageNum === this.questions.length) {
+    //     return true;
+    //   }
+    //   return false;
+    // },
     //Function to return text as Finish if last question, else return text as Next
     updateText(){
       const objectID = this.$route.params.id;
@@ -77,13 +86,27 @@ export default {
   //Functions for navigating between page questions
   methods: {
     nextPage() {
-      const routeId = this.$route.params.id++;
-      // Unary Operator By adding a + sign before a String, it will be converted into a number if it follows the right format.
-      // https://stackabuse.com/javascript-convert-string-to-number/
-      if (+this.$route.params.id > this.questions.length) {
-        return this.$router.push('/results');
+      // const routeId = this.$route.params.id++;
+      // // Unary Operator By adding a + sign before a String, it will be converted into a number if it follows the right format.
+      // // https://stackabuse.com/javascript-convert-string-to-number/
+      // if (+this.$route.params.id > this.questions.length) {
+      //   return this.$router.push('/results');
+      // }
+      // return this.$router.push({ params: routeId  });   
+      const routeId = this.$route.params.id;
+      const nextRouteId = +routeId + 1;
+
+      let newRoute = { 
+        params: {
+          id: nextRouteId, 
+        },
+      };
+
+      if(+routeId === this.questions.length) {
+        newRoute = '/results';
       }
-      return this.$router.push({ params: routeId  });   
+
+      this.$emit('change-page', newRoute);
     },
     prevPage() {
       const routeId = this.$route.params.id--;

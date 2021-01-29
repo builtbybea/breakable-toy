@@ -152,7 +152,7 @@
                 {
                     "text": "Kare Raisu",
                     "image": "/images/019-curry.svg",
-                    "value": "kare raisu",
+                    "value": "kare-raisu",
                     "score": {
                         "Sailor Moon": 10,
                         "Spike Spiegel": 5,

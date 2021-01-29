@@ -4,13 +4,15 @@
       <label :for="text" class="range-input__label">
         <input
           :id="text"
-          v-model="value"
+          :value="value"
           class="range-input__button"
           :type="type"
           :name="name"
           min="0"
           max="100"
           @change="selectedRange"
+          @input="value = $event.target.value"
+          @_input="handleInput"
         >
         <span class="range-input__emoji-thumb" :style="{left: value + '%'}"> {{ getRating }} </span>
         <div class="range-input__slider" :style="{width: (value) + '%'}" />
@@ -32,20 +34,22 @@ export default {
       value: 0,
     };
   },
-  computed: {
-    increment() {
-      let count = this.value;
-      return count++;
-    }, 
+  computed: { 
     getRating(){
       const ratings = ['💩','🙁','😐','🙂','😊','😍'];
       return ratings[(Math.floor(this.value/20))];
     },
   },
   methods: {
-    selectedRange(value) {
-      this.$emit('get-range', value);
+    selectedRange(event) {
+      console.log('test', event);
+      this.$emit('get-range', event);
     },
+    // handleInput(event) {
+    //   console.log('test2');
+    //   this.value = event.target.value;
+    //   this.$emit('get-range', event);
+    // },
   },
 };
 </script>
