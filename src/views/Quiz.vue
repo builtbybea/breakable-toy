@@ -116,7 +116,6 @@ export default {
     //   this.value = null;
     // },
     currentQuestionId(newRouteId){
-      console.log('watchedQuestionId', newRouteId);
       this.value = null;
       this.saveAnswer({
         key: newRouteId,
@@ -129,15 +128,12 @@ export default {
       'saveAnswer',
     ]),
     selectedAnswer(event) {
-      console.log('selectedAnswer', event.target.value);
       this.value = event.target.value;
     },
     selectedRange(event) {
-      // console.log(event.target.value);
       this.value = event.target.value;
     },
     setRating(event, index) {
-      console.log(index);
       this.rating = index;
       this.value = index + 1;
     },
@@ -149,22 +145,14 @@ export default {
     },
     handleSaveAnswer(newRoute) {
       if(this.value === null) {
-        console.log('handleSaveAnswer', this.value);
         return;
       }
       const userAnswerObject = {
         key: this.currentQuestionId,
         value: this.value,
       };
-      // if(this.value !== null) {
-      //   console.log('disabled', this.value);
-      //   this.saveAnswer(userAnswerObject);
-      //   this.$router.push(newRoute);
-      // }
       this.saveAnswer(userAnswerObject);
       this.$router.push(newRoute);
-      // console.log('saveAnswer', newRoute);
-      // console.log('saveAnswer', this.currentQuestionId, this.value);
     },
   },
 };

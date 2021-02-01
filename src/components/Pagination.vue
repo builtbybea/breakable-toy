@@ -31,7 +31,6 @@ export default {
   },
   props: {
     text: String,
-    // value: Boolean,
     value: {
       type: String,
     },
@@ -43,7 +42,6 @@ export default {
       iconRight: ArrowRight,
       iconLeft: ArrowLeft,
       nextText: 'Next',
-      // value: true,
     };
   },
 
@@ -66,16 +64,6 @@ export default {
       console.log('isNextButtonDisabled', this.value);
       return this.value === null;
     },
-    //Function to return true or false if last question
-    // isLastQuestion(){
-    //   const objectID = this.$route.params.id;
-    //   const pageNum = JSON.parse(objectID);
-    //   if(pageNum === this.questions.length) {
-    //     return true;
-    //   }
-    //   return false;
-    // },
-    //Function to return text as Finish if last question, else return text as Next
     updateText(){
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
@@ -86,14 +74,7 @@ export default {
 
   //Functions for navigating between page questions
   methods: {
-    nextPage() {
-      // const routeId = this.$route.params.id++;
-      // // Unary Operator By adding a + sign before a String, it will be converted into a number if it follows the right format.
-      // // https://stackabuse.com/javascript-convert-string-to-number/
-      // if (+this.$route.params.id > this.questions.length) {
-      //   return this.$router.push('/results');
-      // }
-      // return this.$router.push({ params: routeId  });   
+    nextPage() {  
       const routeId = this.$route.params.id;
       const nextRouteId = +routeId + 1;
 
@@ -118,9 +99,6 @@ export default {
       }
       return this.$router.push({ params: routeId  }); 
     },
-  },
-  created() {
-    console.log('created', this.value);
   },
 };
 </script>
