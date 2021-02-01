@@ -56,7 +56,7 @@
       />
     </div>
     
-    <Pagination @change-page="handleSaveAnswer" />
+    <Pagination :value="value" @change-page="handleSaveAnswer" />
   </div>
 </template>
 

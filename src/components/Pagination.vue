@@ -8,7 +8,7 @@
       @click="prevPage"
     />
     <Button
-      :disabled="isAnswerSelected"
+      :disabled="isNextButtonDisabled"
       :text="updateText"
       align="right" 
       :icon="iconRight"
@@ -31,7 +31,10 @@ export default {
   },
   props: {
     text: String,
-    value: Boolean,
+    // value: Boolean,
+    value: {
+      type: String,
+    },
   },
 
   data () {
@@ -40,6 +43,7 @@ export default {
       iconRight: ArrowRight,
       iconLeft: ArrowLeft,
       nextText: 'Next',
+      // value: true,
     };
   },
 
@@ -58,12 +62,9 @@ export default {
       }
       return false;
     },
-    isAnswerSelected(){
-      console.log('isAnswerSelected', this.value);
-      if(this.value !== null) {
-        return true;
-      }
-      return false;
+    isNextButtonDisabled(){
+      console.log('isNextButtonDisabled', this.value);
+      return this.value === null;
     },
     //Function to return true or false if last question
     // isLastQuestion(){
@@ -117,6 +118,9 @@ export default {
       }
       return this.$router.push({ params: routeId  }); 
     },
+  },
+  created() {
+    console.log('created', this.value);
   },
 };
 </script>
