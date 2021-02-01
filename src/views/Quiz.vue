@@ -1,12 +1,6 @@
 <template>
   <div class="quiz">
     <Title :msg="currentQuestion.question" :subtitle="currentQuestion.subtitle" />
-    <pre>Value: {{ value }}</pre>
-    <button @click="handleSaveAnswer()">
-      Store Answer
-    </button>
-    <pre>{{ currentQuestionType }}</pre>
-    <pre> {{ inputType }}</pre>
     <div v-if="currentQuestionType === 'image-selection'" class="quiz__image-input">
       <ImageInput 
         v-for="(option, key) in currentQuestion.choices"
