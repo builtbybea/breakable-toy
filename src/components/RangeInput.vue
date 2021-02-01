@@ -42,14 +42,8 @@ export default {
   },
   methods: {
     selectedRange(event) {
-      console.log('test', event);
       this.$emit('get-range', event);
     },
-    // handleInput(event) {
-    //   console.log('test2');
-    //   this.value = event.target.value;
-    //   this.$emit('get-range', event);
-    // },
   },
 };
 </script>

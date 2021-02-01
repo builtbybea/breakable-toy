@@ -14,7 +14,6 @@
       :icon="iconRight"
       @click="nextPage"
     />
-    <pre>{{ value }}</pre>
   </div>
 </template>
 
@@ -30,7 +29,6 @@ export default {
     Button,
   },
   props: {
-    text: String,
     value: {
       type: String,
     },

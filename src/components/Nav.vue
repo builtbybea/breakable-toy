@@ -12,20 +12,9 @@
     <router-link to="/results">
       Results
     </router-link>
-    {{ count }}
   </nav>
 </template>
 <script>
-
-import { mapGetters } from 'vuex';
-
-export default {
-  computed: {
-    ...mapGetters('quiz',[
-      'count',
-    ]), 
-  },
-};
 
 </script>
 <style lang="scss">
