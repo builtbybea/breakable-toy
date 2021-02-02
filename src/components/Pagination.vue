@@ -53,10 +53,7 @@ export default {
     isFirstQuestion(){
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
-      if (pageNum === 1) {
-        return true;
-      }
-      return false;
+      return (pageNum === 1);
     },
     isNextButtonDisabled(){
       console.log('isNextButtonDisabled', this.value);
