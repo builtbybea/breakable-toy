@@ -105,61 +105,36 @@
                     "text": "Onigiri",
                     "image": "/images/004-onigiri.svg",
                     "value": "onigiri",
-                    "score": {
-                        "Sailor Moon": 25,
-                        "Spike Spiegel": 0,
-                        "Goku": 20,
-                        "Michiko": 5,
-                        "Monkey D. Luffy": 10
-                    }
+                    "character": "sailor-moon",
+                    "score": 25
                 },
                 {
                     "text": "Gyoza",
                     "image": "/images/015-dumpling.svg",
                     "value": "gyoza",
-                    "score": {
-                        "Sailor Moon": 5,
-                        "Spike Spiegel": 0,
-                        "Goku": 10,
-                        "Michiko": 25,
-                        "Monkey D. Luffy": 10
-                    }
+                    "character": "michiko",
+                    "score": 25
                 },
                 {
                     "text": "Ramen",
                     "image": "/images/002-ramen.svg",
                     "value": "ramen",
-                    "score": {
-                        "Sailor Moon": 0,
-                        "Spike Spiegel": 25,
-                        "Goku": 0,
-                        "Michiko": 0,
-                        "Monkey D. Luffy": 0
-                    }
+                    "character": "spike-spigel",
+                    "score": 25
                 },
                 {
                     "text": "Burgers",
                     "image": "/images/010-burger.svg",
                     "value": "burgers",
-                    "score": {
-                        "Sailor Moon": 20,
-                        "Spike Spiegel": 10,
-                        "Goku": 5,
-                        "Michiko": 25,
-                        "Monkey D. Luffy": 15
-                    }
+                    "character": "monkey-d-luffy",
+                    "score": 25
                 },
                 {
                     "text": "Kare Raisu",
                     "image": "/images/019-curry.svg",
                     "value": "kare-raisu",
-                    "score": {
-                        "Sailor Moon": 10,
-                        "Spike Spiegel": 5,
-                        "Goku": 25,
-                        "Michiko": 15,
-                        "Monkey D. Luffy": 20
-                    }
+                    "character": "goku",
+                    "score": 25
                 }
             ]
         },

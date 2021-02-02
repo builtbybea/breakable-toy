@@ -2,6 +2,7 @@
   <div class="results">
     <Title msg="You Are..." />
     <h3>{{ characterName }}</h3>
+    <pre>{{ totalScore }}</pre>
   </div>
 </template>
 
