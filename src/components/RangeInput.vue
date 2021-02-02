@@ -12,7 +12,6 @@
           max="100"
           @change="selectedRange"
           @input="value = $event.target.value"
-          @_input="handleInput"
         >
         <span class="range-input__emoji-thumb" :style="{left: value + '%'}"> {{ getRating }} </span>
         <div class="range-input__slider" :style="{width: (value) + '%'}" />
