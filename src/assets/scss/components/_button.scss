@@ -10,6 +10,10 @@
   border: none;
   border-radius: 50px;
   width: 250px;
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
   &--icon {
     img {
       padding: 1em;
@@ -26,3 +30,4 @@
     background-color: $accent-hover;
   }
 }
+

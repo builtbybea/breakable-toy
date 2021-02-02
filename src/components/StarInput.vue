@@ -50,11 +50,9 @@ export default {
   },
   methods: {
     selectedRating(event){
-      // console.log(event.target.checked);
       this.$emit('rated', event);
     },
     highlightedRating(event){
-      // console.log('highlighted');
       this.$emit('highlighted', event);
     },
     unhighlightedRating(event) {

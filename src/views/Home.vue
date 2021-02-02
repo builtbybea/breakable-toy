@@ -22,6 +22,7 @@ export default {
     Title,
     Button,
   },
+ 
   methods: {
     goToFirstPage(){
       return this.$router.push('/quiz/1');
