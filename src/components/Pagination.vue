@@ -56,7 +56,6 @@ export default {
       return (pageNum === 1);
     },
     isNextButtonDisabled(){
-      console.log('isNextButtonDisabled', this.value);
       return this.value === null;
     },
     updateText(){
@@ -70,8 +69,8 @@ export default {
   //Functions for navigating between page questions
   methods: {
     nextPage() {  
-      const routeId = this.$route.params.id;
-      const nextRouteId = +routeId + 1;
+      const routeId = +this.$route.params.id;
+      const nextRouteId = routeId + 1;
 
       let newRoute = { 
         params: {
@@ -79,7 +78,7 @@ export default {
         },
       };
 
-      if(+routeId === this.questions.length) {
+      if(routeId === this.questions.length) {
         newRoute = '/results';
       }
 
