@@ -26,3 +26,22 @@
     background-color: $accent-hover;
   }
 }
+
+@media only screen and (max-width: 460px) {
+  .button {
+    width: 140px;
+    &--left {
+      margin-left: 10px;
+      padding: 0;
+    }
+    &--right {
+      margin-right: 10px;
+      padding: 0;
+    }
+    &--icon {
+      img {
+        display: none;
+      }
+    }
+  }
+}
