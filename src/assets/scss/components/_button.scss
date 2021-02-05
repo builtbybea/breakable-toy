@@ -21,6 +21,7 @@
   }
   &--right {
     padding-left: 45px;
+    grid-column-end: 5;
   }
   &:hover {
     background-color: $accent-hover;

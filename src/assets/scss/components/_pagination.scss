@@ -1,16 +1,28 @@
 .pagination {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 1fr);
+    margin: 0 4rem;
+    
 }
 
-@include min-width(bp(s)) {
-.pagination {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    margin: 1.5rem;
-    padding: 2rem;
+@media only screen and (min-width: 768px) {
+    .pagination {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+    }
+
 }
+@media only screen and (max-width: 460px) {
+    .pagination {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+    }
 }
