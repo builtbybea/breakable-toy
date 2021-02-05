@@ -1,13 +1,10 @@
 .quiz {
     padding-top: 5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 8rem;
     &__image-input {
         display: flex;
         flex-wrap: wrap;
         place-content: center;
-        // display: grid;
-        // grid-template-columns: repeat(5, 1fr);
-        // grid-template-columns: repeat(auto-fill, minmax(200px, 4fr));
     }
     &__star-input {
         display: flex;
@@ -16,17 +13,6 @@
     }
     &__custom-input {
         margin: 1rem;
-    }
-}
-
-@include min-width(bp(s)) {
-    .quiz {
-        display: grid;
-        grid-gap: 1rem;
-         &__image-input {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-        }
     }
 }
 
