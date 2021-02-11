@@ -27,6 +27,7 @@ const getters = {
       'goku': 0,
       'michiko': 0,
       'monkey-d-luffy': 0,
+      'light-yagami': 0,
     };
 
     const getSelectedQuestionChoice = (questionIndex, questionId) => {
@@ -34,14 +35,19 @@ const getters = {
       return questionChoices.find(choice => choice.value ===  state.userAnswers[questionId]);
     };
     
+    //Question 2
     const questionTwoSelectedChoice = getSelectedQuestionChoice(1, '2');
     totalScore[questionTwoSelectedChoice.character] += questionTwoSelectedChoice.score;
 
-
+    //Question 3
     const questionThreeSelectedChoice = getSelectedQuestionChoice(2, '3');
     totalScore[questionThreeSelectedChoice.character] += questionThreeSelectedChoice.score;
 
+    //Question 4
+    const questionFourSelectedChoice = getSelectedQuestionChoice(3, '4');
+    totalScore[questionFourSelectedChoice.character] += questionFourSelectedChoice.score;
 
+    //Question 5
     const questionFiveChoices = questions[4].choices;
     const questionFiveValue =  parseInt(state.userAnswers['5'], 10);
 
@@ -51,9 +57,11 @@ const getters = {
     });
     totalScore[questionFiveSelectedChoice.character] += questionFiveSelectedChoice.score;
 
+    //Question 6
     const questionSixSelectedChoice = getSelectedQuestionChoice(5, '6');
     totalScore[questionSixSelectedChoice.character] += questionSixSelectedChoice.score;
 
+    //Question 7
     const questionSevenSelectedChoice = getSelectedQuestionChoice(6, '7');
     totalScore[questionSevenSelectedChoice.character] += questionSevenSelectedChoice.score;
   
