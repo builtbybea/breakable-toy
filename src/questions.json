@@ -9,90 +9,50 @@
                 {
                     "text": "Action",
                     "value": "action",
-                    "score": {
-                        "Sailor Moon": 5,
-                        "Spike Spiegel": 10,
-                        "Goku": 25,
-                        "Michiko": 15,
-                        "Monkey D. Luffy": 20
-                    }
+                    "character":"monkey-d-luffy",
+                    "score": 25
                 },
                 {
                     "text": "Comedy",
                     "value": "comedy",
-                    "score": {
-                        "Sailor Moon": 5,
-                        "Spike Spiegel": 0,
-                        "Goku": 10,
-                        "Michiko": 5,
-                        "Monkey D. Luffy": 20
-                    }
+                    "character": "goku",
+                    "score": 25
                 },
                 {
                     "text": "Magic",
                     "value": "magic",
-                    "score": {
-                        "Sailor Moon": 25,
-                        "Spike Spiegel": 0,
-                        "Goku": 10,
-                        "Michiko": 0,
-                        "Monkey D. Luffy": 10
-                    }
+                    "character": "sailor-moon",
+                    "score": 25
                 },
                 {
                     "text": "Adventure",
                     "value": "adventure",
-                    "score": {
-                        "Sailor Moon": 5,
-                        "Spike Spiegel": 10,
-                        "Goku": 20,
-                        "Michiko": 15,
-                        "Monkey D. Luffy": 25
-                    }
+                    "character": "monkey-d-luffy",
+                    "score":  25
                 },
                 {
                     "text": "Drama",
                     "value": "drama",
-                    "score": {
-                        "Sailor Moon": 20,
-                        "Spike Spiegel": 10,
-                        "Goku": 5,
-                        "Michiko": 25,
-                        "Monkey D. Luffy": 15
-                    }
+                    "character": "michiko",
+                    "score":  30
                 },
                 {
                     "text": "Fantasy",
                     "value": "fantasy",
-                    "score": {
-                        "Sailor Moon": 20,
-                        "Spike Spiegel": 10,
-                        "Goku": 5,
-                        "Michiko": 25,
-                        "Monkey D. Luffy": 15
-                    }
+                    "character": "sailor-moon",
+                    "score": 20
                 },
                 {
                     "text": "Romance",
                     "value": "romance",
-                    "score": {
-                        "Sailor Moon": 20,
-                        "Spike Spiegel": 0,
-                        "Goku": 0,
-                        "Michiko": 0,
-                        "Monkey D. Luffy": 0
-                    }
+                    "character": "sailor-moon",
+                    "score":  20
                 },
                 {
                     "text": "Sci-fi",
                     "value": "sci-fi",
-                    "score": {
-                        "Sailor Moon": 20,
-                        "Spike Spiegel": 10,
-                        "Goku": 5,
-                        "Michiko": 25,
-                        "Monkey D. Luffy": 15
-                    }
+                    "character": "spike-spiegel",
+                    "score": 20
                 }
             ]
         },
@@ -106,7 +66,7 @@
                     "image": "/images/004-onigiri.svg",
                     "value": "onigiri",
                     "character": "sailor-moon",
-                    "score": 25
+                    "score": 30
                 },
                 {
                     "text": "Gyoza",
@@ -119,7 +79,7 @@
                     "text": "Ramen",
                     "image": "/images/002-ramen.svg",
                     "value": "ramen",
-                    "character": "spike-spigel",
+                    "character": "spike-spiegel",
                     "score": 25
                 },
                 {
@@ -127,14 +87,14 @@
                     "image": "/images/010-burger.svg",
                     "value": "burgers",
                     "character": "monkey-d-luffy",
-                    "score": 25
+                    "score": 30
                 },
                 {
                     "text": "Kare Raisu",
                     "image": "/images/019-curry.svg",
                     "value": "kare-raisu",
                     "character": "goku",
-                    "score": 25
+                    "score": 35
                 }
             ]
         },
@@ -145,69 +105,39 @@
             "choices":[
                 {
                     "text": "A Big Feast",
-                    "value": "a big feast",
-                    "score": {
-                        "Sailor Moon": 25,
-                        "Spike Spiegel": 25,
-                        "Goku": 25,
-                        "Michiko": 25,
-                        "Monkey D. Luffy": 25
-                    }
+                    "value": "a-big-feast",
+                    "character": "goku",
+                    "score": 25
                 },
                 {
                     "text": "Lavish Clothes",
-                    "value": "lavish clothes",
-                    "score": {
-                        "Sailor Moon": 25,
-                        "Spike Spiegel": 0,
-                        "Goku": 0,
-                        "Michiko": 25,
-                        "Monkey D. Luffy": 0
-                    }
+                    "value": "lavish-clothes",
+                    "character": "michiko",
+                    "score": 25
                 },
                 {
                     "text": "My Friends/Family",
-                    "value": "my friends/family",
-                    "score": {
-                        "Sailor Moon": 25,
-                        "Spike Spiegel": 0,
-                        "Goku": 20,
-                        "Michiko": 5,
-                        "Monkey D. Luffy": 15
-                    }
+                    "value": "my-friends-family",
+                    "character": "sailor-moon",
+                    "score": 25
                 },
                 {
                     "text": "I JUST WANNA FIGHT",
-                    "value": "i just wanna fight",
-                    "score":{
-                        "Sailor Moon": 0,
-                        "Spike Spiegel": 5,
-                        "Goku": 25,
-                        "Michiko": 20,
-                        "Monkey D. Luffy": 25
-                    }
+                    "value": "i-just-wanna-fight",
+                    "character": "goku",
+                    "score": 25
                 },
                 {
                     "text": "Lottery?! One Piece Is The Ulitmate Prize",
                     "value": "lottery?! one piece is the ultimate prize",
-                    "score":{
-                        "Sailor Moon": 10,
-                        "Spike Spiegel": 5,
-                        "Goku": 25,
-                        "Michiko": 15,
-                        "Monkey D. Luffy": 25
-                    }
+                    "character": "monkey-d-luffy",
+                    "score": 30
                 },
                 {
                     "text": "Something Obsecure",
-                    "value": "something obsecure",
-                    "score":{
-                        "Sailor Moon": 0,
-                        "Spike Spiegel": 25,
-                        "Goku": 0,
-                        "Michiko": 20,
-                        "Monkey D. Luffy": 15
-                    }
+                    "value": "something-obsecure",
+                    "character": "spike-spiegel",
+                    "score": 20
                 }
             ]
         },
@@ -217,24 +147,18 @@
             "question": "You Stumble Upon A Notebook On The Ground. Do You...?",
             "choices":[
                  {
-                    "image": "/images/020-journal.svg",
+                     "image": "/images/020-journal.svg",
                      "text": "Take The Notebook 📓",
-                     "value": "take the notebook",
-                     "score":{
-                         "Light Yagami": 300
-                     }
+                     "value": "take-the-notebook",
+                     "character": "light-yagami",
+                     "score": 300
                  },
                  {
                     "image": "/images/043-bin.svg", 
                     "text": "Toss The Notebook In The Bin 🗑️",
-                     "value": "toss the notebook in the bin",
-                     "score":{
-                        "Sailor Moon": 20,
-                        "Spike Spiegel": 10,
-                        "Goku": 5,
-                        "Michiko": 15,
-                        "Monkey D. Luffy": 0
-                     }
+                    "value": "toss-the-notebook-in-the-bin",
+                    "character": "sailor-moon",
+                    "score": 30
                  }
             ]
         },
@@ -244,15 +168,16 @@
             "question": "How Would You Rate Space?",
             "choices": [
                 {
-                    "text": "1",
-                    "value": "1",
-                    "score": {
-                        "Sailor Moon": 0,
-                        "Spike Spiegel": 0,
-                        "Goku": 5,
-                        "Michiko": 10,
-                        "Monkey D. Luffy": 15
-                    }
+                    "min": 80,
+                    "max": 100,
+                    "character": "spike-spiegel",
+                    "score": 25
+                },
+                {
+                    "min": 0,
+                    "max": 79,
+                    "character": "goku",
+                    "score": 15
                 }
             ]
         },
@@ -264,56 +189,32 @@
                 {
                     "text": 1,
                     "value": 1,
-                    "score": {
-                        "Sailor Moon": 0,
-                        "Spike Spiegel": 0,
-                        "Goku": 25,
-                        "Michiko": 0,
-                        "Monkey D. Luffy": 20
-                    }
+                    "character": "goku",
+                    "score": 5
                 },
                 {
                     "text": 2,
                     "value": 2,
-                    "score": {
-                        "Sailor Moon": 5,
-                        "Spike Spiegel": 5,
-                        "Goku": 20,
-                        "Michiko": 5,
-                        "Monkey D. Luffy": 20
-                    }
+                    "character": "monkey-d-luffy",
+                    "score": 10
                 },
                 {
                     "text": 3,
                     "value": 3,
-                    "score": {
-                        "Sailor Moon": 10,
-                        "Spike Spiegel": 5,
-                        "Goku": 15,
-                        "Michiko": 10,
-                        "Monkey D. Luffy": 15
-                    }
+                    "character": "spike-spiegel",
+                    "score": 15
                 },
                 {
                     "text": 4,
                     "value": 4,
-                    "score": {
-                        "Sailor Moon": 15,
-                        "Spike Spiegel": 10,
-                        "Goku": 5,
-                        "Michiko": 10,
-                        "Monkey D. Luffy": 5
-                    }
+                    "character": "michiko",
+                    "score": 20
                 },
                 {
                     "text": 5,
-                    "score": {
-                        "Sailor Moon": 25,
-                        "Spike Spiegel": 10,
-                        "Goku": 5,
-                        "Michiko": 15,
-                        "Monkey D. Luffy": 5
-                    }
+                    "value": 5,
+                    "character":"sailor-moon",
+                    "score": 25
                 }
             ]
         },
@@ -325,57 +226,32 @@
                 {
                     "text": "Empathetic",
                     "value": "empathetic",
-                    "score": {
-                        "Sailor Moon": 25,
-                        "Spike Spiegel": 0,
-                        "Goku": 10,
-                        "Michiko": 10,
-                        "Monkey D. Luffy": 10
-                    }
+                    "character": "sailor-moon",
+                    "score": 25
                 },
                 {
                     "text": "Energetic",
                     "value": "energetic",
-                    "score": {
-                        "Sailor Moon": 10,
-                        "Spike Spiegel": 0,
-                        "Goku": 25,
-                        "Michiko": 0,
-                        "Monkey D. Luffy": 20
-                    }
+                    "character": "goku",
+                    "score": 25
                 },
                 {
                     "text": "Nonchalant",
                     "value": "nonchalant",
-                    "score": {
-                        "Sailor Moon": 0,
-                        "Spike Spiegel": 25,
-                        "Goku": 5,
-                        "Michiko": 20,
-                        "Monkey D. Luffy": 0
-                    }
+                    "character": "spike-spiegel",
+                    "score": 25
                 },
                 {
                     "text": "Wild Spirit",
-                    "value": "wild spirit",
-                    "score": {
-                        "Sailor Moon": 0,
-                        "Spike Spiegel": 0,
-                        "Goku": 10,
-                        "Michiko": 25,
-                        "Monkey D. Luffy": 10
-                    }
+                    "value": "wild-spirit",
+                    "character": "michiko",
+                    "score": 25
                 },
                 {
                     "text": "Carefree, Happy-Go-Lucky",
-                    "value": "carefree, happy-go-lucky",
-                    "score": {
-                        "Sailor Moon": 5,
-                        "Spike Spiegel": 20,
-                        "Goku": 20,
-                        "Michiko": 0,
-                        "Monkey D. Luffy": 25
-                    }
+                    "value": "carefree-happy-go-lucky",
+                    "character": "monkey-d-luffy",
+                    "score": 25
                 }
             ]
         }

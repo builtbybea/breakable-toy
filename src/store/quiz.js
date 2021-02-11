@@ -8,13 +8,13 @@ function state() {
     // userAnswers: {
     // },
     userAnswers : {
-      '1': 'Action',
-      '2': 'gyoza',
-      '3': 'Something Obsecure',
+      '1': 'action',
+      '2': 'onigiri',
+      '3': 'something-obsecure',
       '4': 'Take The Notebook 📓',
-      '5': '100',
+      '5': '50',
       '6': 5,
-      '7': 'Empathetic',
+      '7': 'empathetic',
     },
   };
 }
@@ -29,28 +29,36 @@ const getters = {
       'monkey-d-luffy': 0,
     };
 
-    totalScore.michiko = 10;
+    const getSelectedQuestionChoice = (questionIndex, questionId) => {
+      const questionChoices = questions[questionIndex].choices;
+      return questionChoices.find(choice => choice.value ===  state.userAnswers[questionId]);
+    };
     
-    const questionTwoChoices = questions[1].choices;
-    const questionTwoSelectedChoice = questionTwoChoices.find(choice => {
-      // console.log('test1', choice.character);
-      console.log('state', state.userAnswers['2']);
-      if(choice.value ===  state.userAnswers['2']) return true;
-      return false;
-    });
-    console.log(
-      'test2',
-      questionTwoSelectedChoice.character,
-      questionTwoSelectedChoice.score,
-    );
-
-    // totalScore['sailor-moon'] = 25;
+    const questionTwoSelectedChoice = getSelectedQuestionChoice(1, '2');
     totalScore[questionTwoSelectedChoice.character] += questionTwoSelectedChoice.score;
 
 
-    //const userScore = questionTwoSelectedChoice.score;
+    const questionThreeSelectedChoice = getSelectedQuestionChoice(2, '3');
+    totalScore[questionThreeSelectedChoice.character] += questionThreeSelectedChoice.score;
 
+
+    const questionFiveChoices = questions[4].choices;
+    const questionFiveValue =  parseInt(state.userAnswers['5'], 10);
+
+    const questionFiveSelectedChoice = questionFiveChoices.find(choice => {
+      if(questionFiveValue >= choice.min && questionFiveValue <= choice.max) return true;
+      return false;
+    });
+    totalScore[questionFiveSelectedChoice.character] += questionFiveSelectedChoice.score;
+
+    const questionSixSelectedChoice = getSelectedQuestionChoice(5, '6');
+    totalScore[questionSixSelectedChoice.character] += questionSixSelectedChoice.score;
+
+    const questionSevenSelectedChoice = getSelectedQuestionChoice(6, '7');
+    totalScore[questionSevenSelectedChoice.character] += questionSevenSelectedChoice.score;
+  
     return totalScore;
+    
   },
 };
 
