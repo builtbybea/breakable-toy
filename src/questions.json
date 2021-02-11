@@ -157,8 +157,8 @@
                     "image": "/images/043-bin.svg", 
                     "text": "Toss The Notebook In The Bin 🗑️",
                     "value": "toss-the-notebook-in-the-bin",
-                    "character": "sailor-moon",
-                    "score": 30
+                    "character": "goku",
+                    "score": 5
                  }
             ]
         },
@@ -171,13 +171,31 @@
                     "min": 80,
                     "max": 100,
                     "character": "spike-spiegel",
-                    "score": 25
+                    "score": 30
+                },
+                {
+                    "min": 60,
+                    "max": 79,
+                    "character": "sailor-moon",
+                    "score": 20
+                },
+                {
+                    "min": 40,
+                    "max": 59,
+                    "character": "goku",
+                    "score": 15
+                },
+                {
+                    "min": 20,
+                    "max": 39,
+                    "character": "michiko",
+                    "score": 10
                 },
                 {
                     "min": 0,
-                    "max": 79,
-                    "character": "goku",
-                    "score": 15
+                    "max": 19,
+                    "character": "monkey-d-luffy",
+                    "score": 5
                 }
             ]
         },

@@ -11,7 +11,7 @@ function state() {
       '1': 'action',
       '2': 'onigiri',
       '3': 'something-obsecure',
-      '4': 'Take The Notebook 📓',
+      '4': 'take-the-notebook',
       '5': '50',
       '6': 5,
       '7': 'empathetic',
