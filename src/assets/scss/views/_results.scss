@@ -1,0 +1,33 @@
+.results {
+    padding-bottom: 3.5em;
+    &--title {
+        letter-spacing: 0.35em;
+        color: $secondary;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 2.5em;
+    }
+    &__header {
+        place-content: center;
+    }
+    &--image {
+       height: 450px;
+       width: auto;
+    }
+    &--description {
+        font-family: $h3-font;
+        white-space: pre-wrap;
+        max-width: 65vw;
+        text-align: justify;
+        align-self: center;
+    }
+    &__footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__button {
+        grid-column-start: 3;
+    }
+}
