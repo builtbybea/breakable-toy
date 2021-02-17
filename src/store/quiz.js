@@ -1,17 +1,14 @@
 import { questions } from '@/questions.json';
 
-// import Vue from 'vue';
 //values from quiz.vue will be calculated here(quiz.js)
 function state() {
   return {
   //store value for each question
-    // userAnswers: {
-    // },
     userAnswers : {
       '1': 'action',
       '2': 'onigiri',
       '3': 'something-obsecure',
-      '4': 'take-the-notebook',
+      '4': 'toss-the-notebook-in-the-bin',
       '5': '50',
       '6': 5,
       '7': 'empathetic',
@@ -50,11 +47,7 @@ const getters = {
     //Question 5
     const questionFiveChoices = questions[4].choices;
     const questionFiveValue =  parseInt(state.userAnswers['5'], 10);
-
-    const questionFiveSelectedChoice = questionFiveChoices.find(choice => {
-      if(questionFiveValue >= choice.min && questionFiveValue <= choice.max) return true;
-      return false;
-    });
+    const questionFiveSelectedChoice = questionFiveChoices.find(choice => questionFiveValue >= choice.min && questionFiveValue <= choice.max);
     totalScore[questionFiveSelectedChoice.character] += questionFiveSelectedChoice.score;
 
     //Question 6
