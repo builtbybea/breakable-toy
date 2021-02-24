@@ -1,14 +1,39 @@
 <template>
   <div class="results">
-    <Title msg="You Are..." />
-    <h2 class="results--title"> 
-      {{ name }}
-    </h2>
+    <!-- 
+      truncate description
+      1. create function, then check if description prints to console - done
+      2. create logic to check if description length is greater than a certain length. if larger than certain length, shorten description - done
+      3. else return description in full - done
+      
+      toggle truncated description with button
+      1. add button - done
+      2. toggle button to show/hide the rest of the truncated description - done
+      3. change button text to show Read More or Read Less - done
+      4. conditionally render Read More button if description more than 2500 character - done
+      5. add/remove "..." when add description length is greater than a certain amount of characters - done
+      6. have button render when description is greater than a certain length, if a short description hide read more button - done
+     -->
     <div class="results__container">
-      <img class="results--image" :src="imageUrl" :alt="name">
-      <p class="results--description">
-        {{ description }}
-      </p>
+      <div class="results__sidebar">
+        <Title msg="You Are..." />
+        <h2 class="results--title"> 
+          {{ name }}
+        </h2>
+        <img class="results--image" :src="imageUrl" :alt="name">
+      </div>
+      <div class="results__content">
+        <p class="results--description">
+          {{ getTruncatedCharacterDescription }}
+          <span v-if="!isFullDescription" class="results--ellipsis">....</span>
+        </p>
+        <p v-if="isFullDescription" class="results--description results--readMore">
+          {{ getFullCharacterDescription }}
+        </p>
+        <div class="results--toggle-text-button-container">
+          <Button v-if="showReadMoreButton" class="results__toggle-text-button" :text="updateReadMoreButtonText" @click="toggleDescriptionLength" />
+        </div>
+      </div>
     </div>
     <div class="results__footer">
       <Button class="results__button" text="Go Again!" @click="goToHomePage" />
@@ -31,6 +56,7 @@ export default {
       name: '',
       description: '',
       imageUrl: '',
+      isFullDescription: false,
     };
   },
   computed: {
@@ -49,16 +75,35 @@ export default {
         if(this.totalScore[key] > this.totalScore[highestScoreName]) {
           //set the highestScoreName to be the new key (or string)
           highestScoreName = key;
-          //remove '-' in slug 
         }
       });
       //returns the name of the character with the highest score
       return highestScoreName;
     },
+    getTruncatedCharacterDescription(){
+      if(this.description.length > 2500) {
+        return `${this.description.slice(0, 2346)}`;
+      }
+      return this.description;
+    },
+    showReadMoreButton() {
+      return this.description.length > 2500;
+    },
+    getFullCharacterDescription(){
+      return `${this.description.slice(2346, this.description.length)}`;
+    },
+    updateReadMoreButtonText() {
+      let toggle = this.isFullDescription;
+      console.log('test', toggle = !toggle);
+      return (toggle = !toggle) && this.description.length > 2500  ? 'Read Less' : 'Read More';
+    },
   },
   methods: {
     goToHomePage(){
       return this.$router.push('/');
+    },
+    toggleDescriptionLength(){
+      this.isFullDescription = !this.isFullDescription;
     },
   },
   created() {
@@ -67,42 +112,11 @@ export default {
       method: 'GET',
       redirect: 'follow',
     };
-    
-    const url = 'https://api.jikan.moe/v3/character/';
-    // let characterId;
-
-    // if(this.characterName === 'sailor-moon') {
-    //   characterId = '2030';
-    // } else if(this.characterName === 'spike-spiegel') {
-    //   characterId = '1';
-    // } else if(this.characterName === 'goku') {
-    //   characterId = '246';
-    // } else if(this.characterName === 'monkey-d-luffy') {
-    //   characterId = '40';
-    // } else if (this.characterName === 'michiko'){
-    //   characterId = '15889';
-    // } else {
-    //   characterId = '80';
-    // }
-    // console.log(this.characterName);
-
     // https://stackoverflow.com/questions/44977953/alternative-to-multiple-if-else-statements-in-javascript/44978021
-    // use an object as a map
-    // const getCharacterId = (name) => {
-    //   const characterIdMap = {
-    //     'sailor-moon': '2030',
-    //     'spike-spiegel': '1',
-    //     'goku': '246',
-    //     'monkey-d-luffy': '40',
-    //     'michiko': '15889',
-    //   };
-    //   const wildCardCharacterId = '80';
-    //   return characterIdMap[name] || wildCardCharacterId;
-    // };
-    // const characterId = getCharacterId(this.characterName);
+    // https://www.javascripttutorial.net/es6/javascript-map/
+    // https://javascript.info/map-set 
 
-    //https://www.javascripttutorial.net/es6/javascript-map/
-    //https://javascript.info/map-set 
+    const url = 'https://api.jikan.moe/v3/character/';
 
     const characterIdMap = new Map ([
       ['sailor-moon', '2030'],
@@ -118,10 +132,8 @@ export default {
     fetch(`${url}${characterId}`, requestOptions)
       .then(response => response.json())
       .then(result => {
-        console.log(result);
         this.name = result.name;
         this.description = result.about.replace(/\\n/g, '');
-        // console.log(this.description.length);
         this.imageUrl = result.image_url;
       })
       .catch(error => console.log('error', error));

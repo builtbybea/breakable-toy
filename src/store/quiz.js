@@ -21,7 +21,7 @@ const getters = {
     const totalScore =  { 
       'sailor-moon': 0,
       'spike-spiegel': 0,
-      'goku': 0,
+      'goku': 300,
       'michiko': 0,
       'monkey-d-luffy': 0,
       'light-yagami': 0,
