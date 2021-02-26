@@ -1,7 +1,17 @@
 import { questions } from '@/questions.json';
 
+/*
+  1. refactor state, create default state function (should be empty) and initalize state - done
+  2. create resetAnswer action - done
+  3. create resetAnswer mutation  - done
+  4. create a mapAction in results page method, mapping resetAnswers from quiz store - check with a console.log
+  5. create computed function that changes route back to start of quiz
+  6. watch the current route to new route, results to start page
+  7. add method which resetAnswer/resetQuizAnswers
+  8. add method to event handler to Go Again button, expect on change clear items in store and take user back to start of quiz
+*/
 //values from quiz.vue will be calculated here(quiz.js)
-function state() {
+function getDefaultState() {
   return {
   //store value for each question
     userAnswers : {
@@ -15,6 +25,10 @@ function state() {
     },
   };
 }
+//https://medium.com/@Taha_Shashtari/reset-vuex-module-state-like-a-pro-1acb7f8d9e21
+
+//initalize state
+const state = getDefaultState();
 
 const getters = {
   totalScore(state) {
@@ -68,12 +82,20 @@ const mutations = {
     console.log('mutationsSaveAnswer', 'hungry', answerObject);
     state.userAnswers[answerObject.key] = answerObject.value;
   },
+  RESET_QUIZ_ANSWERS(state){
+    console.log('mutationsRestQuizAnswer', state);
+    Object.assign(state, getDefaultState());
+  },
 };
 
 const actions = {
   saveAnswer(context, answerObject) {
     console.log('actionSaveAnswer', answerObject);
     context.commit('SAVE_ANSWER', answerObject);
+  },
+  resetQuizAnswers(context) {
+    console.log('actionResetQuizAnswers');
+    context.commit('RESET_QUIZ_ANSWERS');
   },
 };
 
