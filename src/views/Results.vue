@@ -24,14 +24,15 @@
       </div>
       <div class="results__content">
         <p class="results--description">
-          {{ getTruncatedCharacterDescription }}
-          <span v-if="!isFullDescription" class="results--ellipsis">....</span>
-        </p>
-        <p v-if="isFullDescription" class="results--description results--readMore">
-          {{ getFullCharacterDescription }}
+          {{ truncatedDescription }}
         </p>
         <div class="results--toggle-text-button-container">
-          <Button v-if="showReadMoreButton" class="results__toggle-text-button" :text="updateReadMoreButtonText" @click="toggleDescriptionLength" />
+          <Button 
+            v-if="showReadMoreButton" 
+            class="results__toggle-text-button" 
+            :text="isFullDescription ? 'Read Less' : 'Read More'" 
+            @click="toggleDescriptionLength"
+          />
         </div>
       </div>
     </div>
@@ -45,6 +46,8 @@
 import Title from '@/components/Title';
 import Button from '@/components/Button';
 import { mapGetters } from 'vuex';
+//created variable to house magic number, good practice to avoid magic nums in code
+const DESCRIPTION_TRUNCATION_LENGTH = 2500;
 export default {
   name:'results-page',
   components: {
@@ -80,26 +83,19 @@ export default {
       //returns the name of the character with the highest score
       return highestScoreName;
     },
-    getTruncatedCharacterDescription(){
-      if(this.description.length > 2500) {
-        return `${this.description.slice(0, 2346)}`;
+    truncatedDescription(){
+      if(this.description.length <= DESCRIPTION_TRUNCATION_LENGTH || this.isFullDescription) {
+        return this.description;
       }
-      return this.description;
+      return `${this.description.slice(0, DESCRIPTION_TRUNCATION_LENGTH - 1)}…`;    
     },
     showReadMoreButton() {
-      return this.description.length > 2500;
-    },
-    getFullCharacterDescription(){
-      return `${this.description.slice(2346, this.description.length)}`;
-    },
-    updateReadMoreButtonText() {
-      let toggle = this.isFullDescription;
-      console.log('test', toggle = !toggle);
-      return (toggle = !toggle) && this.description.length > 2500  ? 'Read Less' : 'Read More';
+      return this.description.length > DESCRIPTION_TRUNCATION_LENGTH;
     },
   },
   methods: {
     goToHomePage(){
+      console.log('testRoute', this.resetQuizAnswers);
       return this.$router.push('/');
     },
     toggleDescriptionLength(){
