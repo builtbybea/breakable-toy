@@ -15,13 +15,13 @@ function getDefaultState() {
   return {
   //store value for each question
     userAnswers : {
-      '1': 'action',
-      '2': 'onigiri',
-      '3': 'something-obsecure',
-      '4': 'toss-the-notebook-in-the-bin',
-      '5': '50',
-      '6': 5,
-      '7': 'empathetic',
+      // '1': 'action',
+      // '2': 'onigiri',
+      // '3': 'something-obsecure',
+      // '4': 'toss-the-notebook-in-the-bin',
+      // '5': '50',
+      // '6': 5,
+      // '7': 'empathetic',
     },
   };
 }
@@ -35,7 +35,7 @@ const getters = {
     const totalScore =  { 
       'sailor-moon': 0,
       'spike-spiegel': 0,
-      'goku': 300,
+      'goku': 0,
       'michiko': 0,
       'monkey-d-luffy': 0,
       'light-yagami': 0,
@@ -79,22 +79,18 @@ const getters = {
 
 const mutations = {
   SAVE_ANSWER(state, answerObject) {
-    console.log('mutationsSaveAnswer', 'hungry', answerObject);
     state.userAnswers[answerObject.key] = answerObject.value;
   },
   RESET_QUIZ_ANSWERS(state){
-    console.log('mutationsRestQuizAnswer', state);
     Object.assign(state, getDefaultState());
   },
 };
 
 const actions = {
   saveAnswer(context, answerObject) {
-    console.log('actionSaveAnswer', answerObject);
     context.commit('SAVE_ANSWER', answerObject);
   },
   resetQuizAnswers(context) {
-    console.log('actionResetQuizAnswers');
     context.commit('RESET_QUIZ_ANSWERS');
   },
 };
