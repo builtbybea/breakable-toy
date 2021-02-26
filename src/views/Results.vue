@@ -95,7 +95,6 @@ export default {
   },
   methods: {
     goToHomePage(){
-      console.log('testRoute', this.resetQuizAnswers);
       return this.$router.push('/');
     },
     toggleDescriptionLength(){
@@ -103,7 +102,6 @@ export default {
     },
   },
   created() {
-    console.log('resultsPage2', this.characterName);
     const requestOptions = {
       method: 'GET',
       redirect: 'follow',
