@@ -8,11 +8,25 @@
     "lint": "eslint --ext .js,.vue ./src"
   },
   "dependencies": {
+    "browserslist": "^4.16.6",
     "core-js": "^3.6.5",
+    "dns-packet": "^5.2.4",
+    "elliptic": "^6.5.4",
     "eslint-import-resolver-webpack": "^0.13.0",
+    "glob-parent": "^6.0.0",
+    "highlight.js": "^11.0.1",
+    "hosted-git-info": "^4.0.2",
+    "is-svg": "^4.3.1",
+    "lodash": "^4.17.21",
+    "normalize-url": "^6.1.0",
+    "postcss": "^8.3.5",
+    "ssri": "^8.0.1",
+    "trim-newlines": "^4.0.2",
+    "url-parse": "^1.5.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-rc.1",
-    "vuex": "^4.0.0-rc.2"
+    "vuex": "^4.0.0-rc.2",
+    "y18n": "^5.0.8"
   },
   "devDependencies": {
     "@fueled/eslint-config-frontend-web": "^2.1.0",
