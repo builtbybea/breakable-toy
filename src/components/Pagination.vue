@@ -8,7 +8,7 @@
       @click="prevPage"
     />
     <Button
-      :disabled="isLastQuestion"
+      :disabled="isNextButtonDisabled"
       :text="updateText"
       align="right" 
       :icon="iconRight"
@@ -29,7 +29,9 @@ export default {
     Button,
   },
   props: {
-    text: String,
+    value: {
+      type: String,
+    },
   },
 
   data () {
@@ -51,21 +53,11 @@ export default {
     isFirstQuestion(){
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
-      if (pageNum === 0) {
-        return true;
-      }
-      return false;
+      return (pageNum === 1);
     },
-    //Function to return true or false if last question
-    isLastQuestion(){
-      const objectID = this.$route.params.id;
-      const pageNum = JSON.parse(objectID);
-      if(pageNum > this.questions.length) {
-        return true;
-      }
-      return false;
+    isNextButtonDisabled(){
+      return this.value === null;
     },
-    //Function to return text as Finish if last question, else return text as Next
     updateText(){
       const objectID = this.$route.params.id;
       const pageNum = JSON.parse(objectID);
@@ -76,14 +68,21 @@ export default {
 
   //Functions for navigating between page questions
   methods: {
-    nextPage() {
-      const routeId = this.$route.params.id++;
-      // Unary Operator By adding a + sign before a String, it will be converted into a number if it follows the right format.
-      // https://stackabuse.com/javascript-convert-string-to-number/
-      if (+this.$route.params.id > this.questions.length) {
-        return this.$router.push('/results');
+    nextPage() {  
+      const routeId = +this.$route.params.id;
+      const nextRouteId = routeId + 1;
+
+      let newRoute = { 
+        params: {
+          id: nextRouteId, 
+        },
+      };
+
+      if(routeId === this.questions.length) {
+        newRoute = '/results';
       }
-      return this.$router.push({ params: routeId  });   
+
+      this.$emit('change-page', newRoute);
     },
     prevPage() {
       const routeId = this.$route.params.id--;

@@ -20,5 +20,6 @@ module.exports = {
       "vue/no-multiple-template-root": 0,
       "vue/component-definition-name-casing": 0,
       "no-console": 0,
+      "vue-a11y/click-events-have-key-events": 0,
     },
   };
