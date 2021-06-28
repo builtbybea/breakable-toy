@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "browserslist": "^4.16.6",
+    "color-string": "^1.5.5",
     "core-js": "^3.6.5",
     "dns-packet": "^5.2.4",
     "elliptic": "^6.5.4",
@@ -26,6 +27,7 @@
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-rc.1",
     "vuex": "^4.0.0-rc.2",
+    "ws": "^7.5.0",
     "y18n": "^5.0.8"
   },
   "devDependencies": {
