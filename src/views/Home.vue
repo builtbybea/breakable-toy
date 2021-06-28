@@ -15,6 +15,7 @@
 // @ is an alias to /src
 import Title from '@/components/Title.vue';
 import Button from '@/components/Button.vue';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'home-page',
@@ -22,11 +23,19 @@ export default {
     Title,
     Button,
   },
- 
   methods: {
+    ...mapActions('quiz', [
+      'resetQuizAnswers',
+    ]),
     goToFirstPage(){
       return this.$router.push('/quiz/1');
     },
+  },
+  created() {
+    const currentRouteValuePath = this.$router.currentRoute.value.path;
+    if(currentRouteValuePath === '/') {
+      return this.resetQuizAnswers();
+    }
   },
 };
 </script>

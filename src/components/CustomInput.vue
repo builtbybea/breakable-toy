@@ -2,7 +2,7 @@
   <div class="custom-input">
     <input 
       :id="text" 
-      :value="text"
+      :value="value"
       class="custom-input__button" 
       :type="type" 
       :name="name"
@@ -23,6 +23,7 @@ export default {
     type: String,
     name: String,
     image: String,
+    value: String,
   },
 
   methods: {

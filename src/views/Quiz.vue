@@ -15,12 +15,8 @@
     </div>
     <div v-else-if="currentQuestionType === 'slider-scale'" class="quiz__range-input">
       <RangeInput 
-        v-for="(option, key) in currentQuestion.choices"
-        :key="key"
-        :text="option.text"
-        :type="inputType"
-        :image="option.image"
-        name="image"
+        id="slider-scale"
+        name="range"
         @get-range="selectedRange"
       />
     </div>
@@ -43,6 +39,7 @@
         v-for="(option, key) in currentQuestion.choices"
         :key="key"
         :text="option.text"
+        :value="option.value"
         :type="inputType"
         :image="option.image"
         name="option"
