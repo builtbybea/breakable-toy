@@ -15,11 +15,13 @@
     }
     &__button {
        opacity: 0;
-   }  
+   } 
+   &--text {
+    margin-left: 20px;
+   }
     &__image {
-        height: 150px;
-        width: 150px;
-        padding: 10px;
+        height: 85px;
+        width: 90px;
         cursor: pointer;
         transition: all .5s ease-in-out;
         &:hover {
@@ -27,5 +29,28 @@
           box-shadow: inset 0 0 0 5px $accent; 
           padding: 15px;  
         }
-   }
+    }
+}
+
+@include min-width(bp(s)) { 
+    .image-input {
+        &__image {
+            height: 150px;
+            width: 150px;
+            padding: 10px;
+        }
+    }
+}
+
+@include max-width(bp(xs)) {
+    .image-input {
+        margin: 10px;
+        &__label {
+        display: flex;
+        justify-content: center;
+    }  
+     &--text {
+            align-self: center;
+        } 
+    }
 }

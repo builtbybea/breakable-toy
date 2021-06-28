@@ -34,7 +34,7 @@
         @unhighlighted="unsetHighlighted($event, index)"
       />
     </div>
-    <div v-else>
+    <div v-else class="quiz__custom-input">
       <CustomInput
         v-for="(option, key) in currentQuestion.choices"
         :key="key"

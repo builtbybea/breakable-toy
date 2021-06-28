@@ -1,11 +1,57 @@
 .quiz {
+    padding-top: 5rem;
+    padding-bottom: 8rem;
     &__image-input {
+        display: flex;
+        flex-wrap: wrap;
+        place-content: center;
+    }
+    &__star-input {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
-    &__star-input {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
+
+@media only screen and (max-width: 460px) {
+    .quiz {
+        padding-bottom: 8rem;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .quiz {
+        &__range-input {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .quiz {
+        &__range-input {
+            padding-top: 50px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .quiz {
+        &__custom-input {
+            margin-top: 5rem;
+        }
+        &__image-input {
+            margin-top: 6rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .quiz {
+        &__star-input {
+            margin: 80px 80px 0 80px;
+            padding: 20px;
+        }
     }
 }

@@ -1,0 +1,26 @@
+.pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 1fr);
+    bottom: 50px;
+    margin: 0 2.5rem;
+    
+}
+
+// @media only screen and (min-width: 768px) {
+//     .pagination {
+//         bottom: 50px;
+//     }
+
+// }
+@media only screen and (max-width: 460px) {
+    .pagination {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        bottom: 30px;
+    }
+}

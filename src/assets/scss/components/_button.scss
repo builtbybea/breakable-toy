@@ -25,9 +25,28 @@
   }
   &--right {
     padding-left: 45px;
+    grid-column-end: 5;
   }
   &:hover {
     background-color: $accent-hover;
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .button {
+    width: 140px;
+    &--left {
+      margin-left: 10px;
+      padding: 0;
+    }
+    &--right {
+      margin-right: 10px;
+      padding: 0;
+    }
+    &--icon {
+      img {
+        display: none;
+      }
+    }
+  }
+}

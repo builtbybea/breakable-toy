@@ -12,9 +12,10 @@
 @import "components/imageInput";
 @import "components/rangeInput";
 @import "components/starInput";
+@import "components/pagination";
+@import "components/title";
 
 //Views
 @import "views/home";
 @import "views/quiz";
-@import "views/results"
-
+@import "views/results";

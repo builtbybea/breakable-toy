@@ -11,6 +11,7 @@
     &__image {
         height: 150px;
         width: 150px;
+        padding-bottom: 2rem;
         margin: auto;
     }
     /*Hide browser's default input buttons*/
@@ -60,6 +61,21 @@
                 width: 10px;
                 border-radius: 50%;
                 opacity: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .custom-input {
+        // display: flex;
+         &__image {
+                height: 135px;
+                width: 135px;
+        }
+        &__label {
+            &--radio {
+                width: 80vw;
             }
         }
     }

@@ -1,7 +1,7 @@
 <template>
-  <pre class="_debug">
+  <!-- <pre class="_debug">
     {{ $store.state.quiz.userAnswers }}
-    </pre>
+    </pre> -->
   <div class="main">
     <Nav />
     <router-view />
@@ -29,6 +29,21 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+#nav {
+  position: fixed;
+  top: auto;
+  right: -1000px;
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 ._debug {
   position: fixed;
   top: 0;
@@ -38,6 +53,7 @@ export default {
   z-index: 9999;
   margin: 0;
   color: white;
+}
 }
 
 </style>

@@ -37,6 +37,7 @@
         height: 100%;
         appearance: none;
         opacity: 0;
+        margin: 0;
         &:checked ~ svg {
             fill: $accent;
         }
@@ -63,6 +64,23 @@
         display: flex;
         place-items: center;
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .star-input{
+        &__svg-star {
+            height: 100px;
+            width: 60px;
+            margin: 0.05em;
+            padding: 0;
+        }
+        &--highlighted {
+            transform: scale(1);
+        }
+        &__star-number {
+            font-size: $font-size-default;
+        }
     }
 }
 
