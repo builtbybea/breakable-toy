@@ -8,6 +8,7 @@
     "lint": "eslint --ext .js,.vue ./src"
   },
   "dependencies": {
+    "browserslist": "^4.16.6",
     "core-js": "^3.6.5",
     "elliptic": "^6.5.4",
     "eslint-import-resolver-webpack": "^0.13.0",
