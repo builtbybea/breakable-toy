@@ -110,7 +110,7 @@ export default {
     // https://www.javascripttutorial.net/es6/javascript-map/
     // https://javascript.info/map-set 
 
-    const url = 'https://api.jikan.moe/v3/character/';
+    const url = 'https://api.jikan.moe/v4/characters/';
 
     const characterIdMap = new Map ([
       ['sailor-moon', '2030'],
@@ -126,9 +126,9 @@ export default {
     fetch(`${url}${characterId}`, requestOptions)
       .then(response => response.json())
       .then(result => {
-        this.name = result.name;
-        this.description = result.about.replace(/\\n/g, '');
-        this.imageUrl = result.image_url;
+        this.name = result.data.name;
+        this.description = result.data.about.replace(/\\n/g, '');
+        this.imageUrl = result.data.images.jpg.image_url;
       })
       .catch(error => console.log('error', error));
   },
